@@ -7,6 +7,5 @@ import com.project.bean.AnnonceVoiture;
 
 @Repository
 public interface AnnonceVoitureDao extends JpaRepository<AnnonceVoiture, Long> {
-	
 
 }
