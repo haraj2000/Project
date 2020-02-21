@@ -4,7 +4,7 @@ public class Marque {
 	private long id;
 	private String nom;
 	private Modele modele;
-	private Annonce annonce;
+	private AnnonceVoiture annonce;
 	public long getId() {
 		return id;
 	}
@@ -23,13 +23,13 @@ public class Marque {
 	public void setModele(Modele modele) {
 		this.modele = modele;
 	}
-	public Annonce getAnnonce() {
+	public AnnonceVoiture getAnnonce() {
 		return annonce;
 	}
-	public void setAnnonce(Annonce annonce) {
+	public void setAnnonce(AnnonceVoiture annonce) {
 		this.annonce = annonce;
 	}
-	public Marque(long id, String nom, Modele modele, Annonce annonce) {
+	public Marque(long id, String nom, Modele modele, AnnonceVoiture annonce) {
 		super();
 		this.id = id;
 		this.nom = nom;

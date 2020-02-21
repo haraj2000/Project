@@ -2,7 +2,7 @@ package com.project.bean;
 
 public class Carburant {
 	private String energie;
-	private Annonce annonce;
+	private AnnonceVoiture annonce;
 	
 	public String getEnergie() {
 		return energie;
@@ -10,13 +10,13 @@ public class Carburant {
 	public void setEnergie(String energie) {
 		this.energie = energie;
 	}
-	public Annonce getAnnonce() {
+	public AnnonceVoiture getAnnonce() {
 		return annonce;
 	}
-	public void setAnnonce(Annonce annonce) {
+	public void setAnnonce(AnnonceVoiture annonce) {
 		this.annonce = annonce;
 	}
-	public Carburant(String energie, Annonce annonce) {
+	public Carburant(String energie, AnnonceVoiture annonce) {
 		super();
 		this.energie = energie;
 		this.annonce = annonce;

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Annonce {
+public class AnnonceVoiture {
 	private long id;
 	private Date date;
 	private String descrp;
@@ -83,7 +83,7 @@ public class Annonce {
 	public void setCommentaires(List<Commentaire> commentaires) {
 		this.commentaires = commentaires;
 	}
-	public Annonce(long id, Date date, String descrp, BigDecimal prix, long kilometrage, String couleur,
+	public AnnonceVoiture(long id, Date date, String descrp, BigDecimal prix, long kilometrage, String couleur,
 			Carburant carburant, Marque marque, Transmission transmission, User user, List<Commentaire> commentaires) {
 		super();
 		this.id = id;
@@ -98,7 +98,7 @@ public class Annonce {
 		this.user = user;
 		this.commentaires = commentaires;
 	}
-	public Annonce() {
+	public AnnonceVoiture() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

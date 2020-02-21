@@ -2,7 +2,7 @@ package com.project.bean;
 
 public class Commentaire {
 	private User user;
-	private Annonce annonce;
+	private AnnonceVoiture annonce;
 	private String message;
 	public User getUser() {
 		return user;
@@ -10,10 +10,10 @@ public class Commentaire {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public Annonce getAnnonce() {
+	public AnnonceVoiture getAnnonce() {
 		return annonce;
 	}
-	public void setAnnonce(Annonce annonce) {
+	public void setAnnonce(AnnonceVoiture annonce) {
 		this.annonce = annonce;
 	}
 	public String getMessage() {
@@ -22,7 +22,7 @@ public class Commentaire {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public Commentaire(User user, Annonce annonce, String message) {
+	public Commentaire(User user, AnnonceVoiture annonce, String message) {
 		super();
 		this.user = user;
 		this.annonce = annonce;

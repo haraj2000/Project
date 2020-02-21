@@ -3,7 +3,7 @@ package com.project.bean;
 public class Transmission {
 	private long id;
 	private String libelle;
-	private Annonce annonce;
+	private AnnonceVoiture annonce;
 	public long getId() {
 		return id;
 	}
@@ -16,13 +16,13 @@ public class Transmission {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
-	public Annonce getAnnonce() {
+	public AnnonceVoiture getAnnonce() {
 		return annonce;
 	}
-	public void setAnnonce(Annonce annonce) {
+	public void setAnnonce(AnnonceVoiture annonce) {
 		this.annonce = annonce;
 	}
-	public Transmission(long id, String libelle, Annonce annonce) {
+	public Transmission(long id, String libelle, AnnonceVoiture annonce) {
 		super();
 		this.id = id;
 		this.libelle = libelle;

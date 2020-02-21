@@ -8,7 +8,7 @@ public class User {
 	private String login;
 	private String password;
 	private String nom;
-	private Annonce annonce;
+	private AnnonceVoiture annonce;
 	private List<Commentaire> commentaires= new ArrayList<>();
 	public long getId() {
 		return id;
@@ -34,10 +34,10 @@ public class User {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public Annonce getAnnonce() {
+	public AnnonceVoiture getAnnonce() {
 		return annonce;
 	}
-	public void setAnnonce(Annonce annonce) {
+	public void setAnnonce(AnnonceVoiture annonce) {
 		this.annonce = annonce;
 	}
 	public List<Commentaire> getCommentaires() {
@@ -46,7 +46,7 @@ public class User {
 	public void setCommentaires(List<Commentaire> commentaires) {
 		this.commentaires = commentaires;
 	}
-	public User(long id, String login, String password, String nom, Annonce annonce, List<Commentaire> commentaires) {
+	public User(long id, String login, String password, String nom, AnnonceVoiture annonce, List<Commentaire> commentaires) {
 		super();
 		this.id = id;
 		this.login = login;
