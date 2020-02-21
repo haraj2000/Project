@@ -13,7 +13,7 @@ import javax.persistence.Id;
 public class AnnonceVoiture {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	private Date date;
 	private String descrp;
 	private BigDecimal prix;
