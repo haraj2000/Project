@@ -10,4 +10,18 @@ public class TypeReview {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private int nbrStars;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public int getNbrStars() {
+		return nbrStars;
+	}
+	public void setNbrStars(int nbrStars) {
+		this.nbrStars = nbrStars;
+	}
+	
+	
 }
