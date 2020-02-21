@@ -5,7 +5,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
 public class AnnonceVoiture {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private Date date;
 	private String descrp;
@@ -107,6 +114,26 @@ public class AnnonceVoiture {
 		return "Annonce [id=" + id + ", date=" + date + ", descrp=" + descrp + ", prix=" + prix + ", kilometrage="
 				+ kilometrage + ", couleur=" + couleur + ", carburant=" + carburant + ", marque=" + marque
 				+ ", transmission=" + transmission + ", user=" + user + ", commentaires=" + commentaires + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (id ^ (id >>> 32));
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AnnonceVoiture other = (AnnonceVoiture) obj;
+		if (id != other.id)
+			return false;
+		return true;
 	}
 	
 	
