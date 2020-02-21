@@ -1,5 +1,9 @@
 package com.project.bean;
 
+import javax.persistence.Entity;
+
+@Entity
+
 public class Commentaire {
 	private User user;
 	private AnnonceVoiture annonce;

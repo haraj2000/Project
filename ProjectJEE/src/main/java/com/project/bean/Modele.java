@@ -2,6 +2,8 @@ package com.project.bean;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+@Entity
 public class Modele 
 {
    private String nom;

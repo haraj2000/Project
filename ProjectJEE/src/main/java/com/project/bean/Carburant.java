@@ -1,6 +1,10 @@
 package com.project.bean;
 
+import javax.persistence.Entity;
+@Entity
+
 public class Carburant {
+
 	private String energie;
 	private AnnonceVoiture annonce;
 	
