@@ -17,10 +17,6 @@ public class AnnonceImmobilier {
 	@ManyToOne
 	private TypeImmobilier typeImmobilier;
 	
-	
-	
-	
-	
 	public TypeImmobilier getTypeImmobilier() {
 		return typeImmobilier;
 	}

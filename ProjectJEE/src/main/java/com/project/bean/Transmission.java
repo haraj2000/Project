@@ -12,6 +12,7 @@ public class Transmission {
 	private long id;
 	private String libelle;
 
+	private AnnonceVoiture annonceVoiture;
 	
 	@Override
 	public int hashCode() {
@@ -48,11 +49,27 @@ public class Transmission {
 		this.libelle = libelle;
 	}
 
+	public AnnonceVoiture getAnnonce() {
+		return annonceVoiture;
+	}
+	public void setAnnonce(AnnonceVoiture annonceVoiture) {
+		this.annonceVoiture = annonceVoiture;
+	}
+	public Transmission(long id, String libelle, AnnonceVoiture annonceVoiture) {
+		super();
+		this.id = id;
+		this.libelle = libelle;
+		this.annonceVoiture = annonceVoiture;
+	}
 	public Transmission() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
+	@Override
+	public String toString() {
+		return "Transmission [id=" + id + ", libelle=" + libelle + ", annonceVoiture=" + annonceVoiture + "]";
+	}
 	
 	
 	
