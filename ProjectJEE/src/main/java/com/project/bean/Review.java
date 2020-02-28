@@ -12,6 +12,7 @@ public class Review {
 	private long id;
 	@ManyToOne
 	private TypeReview typeReview;
+	
 	public long getId() {
 		return id;
 	}
