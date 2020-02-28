@@ -19,8 +19,7 @@ public class AnnonceVoiture {
 	private String descrp;
 	private BigDecimal prix;
 	private long kilometrage;
-	private String couleur;
-	
+	private String couleur;	
 	private Carburant carburant;	
 	private Marque marque;
 	private Transmission transmission;
