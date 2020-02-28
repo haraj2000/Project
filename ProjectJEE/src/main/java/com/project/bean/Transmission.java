@@ -11,6 +11,7 @@ public class Transmission {
 	private long id;
 	private String libelle;
 	private AnnonceVoiture annonce;
+	
 	public long getId() {
 		return id;
 	}
