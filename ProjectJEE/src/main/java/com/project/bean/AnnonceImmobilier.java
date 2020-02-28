@@ -2,6 +2,8 @@ package com.project.bean;
 
 import java.util.Date;
 
+import javax.persistence.ManyToOne;
+
 public class AnnonceImmobilier {
 	private int id;
 	private float prix;
@@ -10,6 +12,27 @@ public class AnnonceImmobilier {
 	private Date dateAnnonce;
 	private String adresseImm;
 	private String villeImm;
+	@ManyToOne
+	private Annonceur annonceur;
+	@ManyToOne
+	private TypeImmobilier typeImmobilier;
+	
+	
+	
+	
+	
+	public TypeImmobilier getTypeImmobilier() {
+		return typeImmobilier;
+	}
+	public void setTypeImmobilier(TypeImmobilier typeImmobilier) {
+		this.typeImmobilier = typeImmobilier;
+	}
+	public Annonceur getAnnonceur() {
+		return annonceur;
+	}
+	public void setAnnonceur(Annonceur annonceur) {
+		this.annonceur = annonceur;
+	}
 	public String getAdresseImm() {
 		return adresseImm;
 	}

@@ -11,8 +11,7 @@ public class Carburant {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-	private String energie;
-	private AnnonceVoiture annonce;
+	private String libelle;
 	
 	
 	@Override
@@ -41,33 +40,17 @@ public class Carburant {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getEnergie() {
-		return energie;
-	}
-	public void setEnergie(String energie) {
-		this.energie = energie;
-	}
-	public AnnonceVoiture getAnnonce() {
-		return annonce;
-	}
-	public void setAnnonce(AnnonceVoiture annonce) {
-		this.annonce = annonce;
-	}
-	
-	public Carburant(long id, String energie, AnnonceVoiture annonce) {
-		super();
-		this.id = id;
-		this.energie = energie;
-		this.annonce = annonce;
-	}
 	public Carburant() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
-	public String toString() {
-		return "Carburant [id=" + id + ", energie=" + energie + ", annonce=" + annonce + "]";
+	public String getLibelle() {
+		return libelle;
 	}
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
+	
 	
 
 }

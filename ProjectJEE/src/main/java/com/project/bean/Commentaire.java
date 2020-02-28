@@ -1,21 +1,41 @@
 package com.project.bean;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Commentaire {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	private Review review;
+	@ManyToOne
 	private Annonceur annonceur;
+	@ManyToOne
 	private AnnonceVoiture annonce;
 	private String message;
+	private String titre;
+	
+	private Date dateCommentaire;	
+		
 	
 	
+	public Date getDateCommentaire() {
+		return dateCommentaire;
+	}
+	public void setDateCommentaire(Date dateCommentaire) {
+		this.dateCommentaire = dateCommentaire;
+	}
+	public String getTitre() {
+		return titre;
+	}
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

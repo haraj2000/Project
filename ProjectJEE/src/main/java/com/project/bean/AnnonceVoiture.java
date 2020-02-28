@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 @Entity
 public class AnnonceVoiture {
 	@Id
@@ -24,6 +25,7 @@ public class AnnonceVoiture {
 	private Marque marque;
 	private Transmission transmission;
 	private Annonceur annonceur;
+	@OneToMany(mappedBy ="annonceVoiture")
 	private List<Commentaire> commentaires= new ArrayList<>();
 	
 	public long getId() {

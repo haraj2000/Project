@@ -11,7 +11,7 @@ public class Transmission {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String libelle;
-	private AnnonceVoiture annonce;
+
 	
 	@Override
 	public int hashCode() {
@@ -47,26 +47,12 @@ public class Transmission {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
-	public AnnonceVoiture getAnnonce() {
-		return annonce;
-	}
-	public void setAnnonce(AnnonceVoiture annonce) {
-		this.annonce = annonce;
-	}
-	public Transmission(long id, String libelle, AnnonceVoiture annonce) {
-		super();
-		this.id = id;
-		this.libelle = libelle;
-		this.annonce = annonce;
-	}
+
 	public Transmission() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
-	public String toString() {
-		return "Transmission [id=" + id + ", libelle=" + libelle + ", annonce=" + annonce + "]";
-	}
+	
 	
 	
 	

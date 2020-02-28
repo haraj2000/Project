@@ -16,7 +16,7 @@ public class Annonceur {
 	private long id;
 	private String login;
 	private String password;
-	private String first_name;
+	private String first_name; // la ilaha ila lah
 	private String Last_name;
 	private String mail;
 	private int phone_number;
