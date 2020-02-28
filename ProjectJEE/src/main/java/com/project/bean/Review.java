@@ -11,31 +11,46 @@ public class Review {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	@ManyToOne
-	private long idType;
+	private TypeReview typeReview;
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	public long getIdType() {
-		return idType;
+	public TypeReview getTypeReview() {
+		return typeReview;
 	}
-	public void setIdType(long idType) {
-		this.idType = idType;
+	public void setTypeReview(TypeReview typeReview) {
+		this.typeReview = typeReview;
 	}
-	public String getIdAnnonceur() {
-		return idAnnonceur;
+	public Review(long id, TypeReview typeReview) {
+		super();
+		this.id = id;
+		this.typeReview = typeReview;
 	}
-	public void setIdAnnonceur(String idAnnonceur) {
-		this.idAnnonceur = idAnnonceur;
+	public Review() {
+		super();
 	}
-	public String getComment() {
-		return comment;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (id ^ (id >>> 32));
+		return result;
 	}
-	public void setComment(String comment) {
-		this.comment = comment;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Review other = (Review) obj;
+		if (id != other.id)
+			return false;
+		return true;
 	}
-	private String idAnnonceur;
-	private String comment;
+	
 }
