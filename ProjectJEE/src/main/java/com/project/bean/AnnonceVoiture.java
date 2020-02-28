@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 @Entity
 public class AnnonceVoiture {
 	@Id
@@ -24,7 +23,7 @@ public class AnnonceVoiture {
 	private Carburant carburant;	
 	private Marque marque;
 	private Transmission transmission;
-	private User user;
+	private Annonceur annonceur;
 	private List<Commentaire> commentaires= new ArrayList<>();
 	
 	public long getId() {
@@ -88,12 +87,14 @@ public class AnnonceVoiture {
 	public void setTransmission(Transmission transmission) {
 		this.transmission = transmission;
 	}
-	public User getUser() {
-		return user;
+	
+	public Annonceur getAnnonceur() {
+		return annonceur;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setAnnonceur(Annonceur annonceur) {
+		this.annonceur = annonceur;
 	}
+	
 	public List<Commentaire> getCommentaires() {
 		return commentaires;
 	}
@@ -105,15 +106,16 @@ public class AnnonceVoiture {
 	public String toString() {
 		return "AnnonceVoiture [id=" + id + ", referance=" + referance + ", date=" + date + ", descrp=" + descrp
 				+ ", prix=" + prix + ", kilometrage=" + kilometrage + ", couleur=" + couleur + ", carburant="
-				+ carburant + ", marque=" + marque + ", transmission=" + transmission + ", user=" + user
+				+ carburant + ", marque=" + marque + ", transmission=" + transmission + ", annonceur=" + annonceur
 				+ ", commentaires=" + commentaires + "]";
 	}
 	public AnnonceVoiture() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public AnnonceVoiture(Long id, String referance, Date date, String descrp, BigDecimal prix, long kilometrage,
-			String couleur, Carburant carburant, Marque marque, Transmission transmission, User user,
+			String couleur, Carburant carburant, Marque marque, Transmission transmission, Annonceur annonceur,
 			List<Commentaire> commentaires) {
 		super();
 		this.id = id;
@@ -126,7 +128,7 @@ public class AnnonceVoiture {
 		this.carburant = carburant;
 		this.marque = marque;
 		this.transmission = transmission;
-		this.user = user;
+		this.annonceur = annonceur;
 		this.commentaires = commentaires;
 	}
 	@Override
