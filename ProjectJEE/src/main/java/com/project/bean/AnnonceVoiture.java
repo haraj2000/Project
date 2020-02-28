@@ -9,11 +9,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 @Entity
 public class AnnonceVoiture {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private String referance ;
 	private Date date;
 	private String descrp;
 	private BigDecimal prix;
@@ -24,11 +26,19 @@ public class AnnonceVoiture {
 	private Transmission transmission;
 	private User user;
 	private List<Commentaire> commentaires= new ArrayList<>();
+	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
+	}
+	
+	public String getReferance() {
+		return referance;
+	}
+	public void setReferance(String referance) {
+		this.referance = referance;
 	}
 	public Date getDate() {
 		return date;
@@ -90,10 +100,24 @@ public class AnnonceVoiture {
 	public void setCommentaires(List<Commentaire> commentaires) {
 		this.commentaires = commentaires;
 	}
-	public AnnonceVoiture(long id, Date date, String descrp, BigDecimal prix, long kilometrage, String couleur,
-			Carburant carburant, Marque marque, Transmission transmission, User user, List<Commentaire> commentaires) {
+
+	@Override
+	public String toString() {
+		return "AnnonceVoiture [id=" + id + ", referance=" + referance + ", date=" + date + ", descrp=" + descrp
+				+ ", prix=" + prix + ", kilometrage=" + kilometrage + ", couleur=" + couleur + ", carburant="
+				+ carburant + ", marque=" + marque + ", transmission=" + transmission + ", user=" + user
+				+ ", commentaires=" + commentaires + "]";
+	}
+	public AnnonceVoiture() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public AnnonceVoiture(Long id, String referance, Date date, String descrp, BigDecimal prix, long kilometrage,
+			String couleur, Carburant carburant, Marque marque, Transmission transmission, User user,
+			List<Commentaire> commentaires) {
 		super();
 		this.id = id;
+		this.referance = referance;
 		this.date = date;
 		this.descrp = descrp;
 		this.prix = prix;
@@ -104,16 +128,6 @@ public class AnnonceVoiture {
 		this.transmission = transmission;
 		this.user = user;
 		this.commentaires = commentaires;
-	}
-	public AnnonceVoiture() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	@Override
-	public String toString() {
-		return "Annonce [id=" + id + ", date=" + date + ", descrp=" + descrp + ", prix=" + prix + ", kilometrage="
-				+ kilometrage + ", couleur=" + couleur + ", carburant=" + carburant + ", marque=" + marque
-				+ ", transmission=" + transmission + ", user=" + user + ", commentaires=" + commentaires + "]";
 	}
 	@Override
 	public int hashCode() {
