@@ -53,8 +53,10 @@ public class Carburant {
 	public void setAnnonce(AnnonceVoiture annonce) {
 		this.annonce = annonce;
 	}
-	public Carburant(String energie, AnnonceVoiture annonce) {
+	
+	public Carburant(long id, String energie, AnnonceVoiture annonce) {
 		super();
+		this.id = id;
 		this.energie = energie;
 		this.annonce = annonce;
 	}
@@ -64,8 +66,8 @@ public class Carburant {
 	}
 	@Override
 	public String toString() {
-		return "Carburant [energie=" + energie + ", annonce=" + annonce + "]";
+		return "Carburant [id=" + id + ", energie=" + energie + ", annonce=" + annonce + "]";
 	}
-
+	
 
 }
