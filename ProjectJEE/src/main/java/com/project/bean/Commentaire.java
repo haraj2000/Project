@@ -10,7 +10,8 @@ public class Commentaire {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	private User user;
+	private Review review;
+	private Annonceur annonceur;
 	private AnnonceVoiture annonce;
 	private String message;
 	
@@ -41,11 +42,11 @@ public class Commentaire {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public User getUser() {
-		return user;
+	public Annonceur getAnnonceur() {
+		return annonceur;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setAnnonceur(Annonceur Annonceur) {
+		this.annonceur = Annonceur;
 	}
 	public AnnonceVoiture getAnnonce() {
 		return annonce;
@@ -59,9 +60,11 @@ public class Commentaire {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public Commentaire(User user, AnnonceVoiture annonce, String message) {
+	
+	public Commentaire(long id, Annonceur Annonceur, AnnonceVoiture annonce, String message) {
 		super();
-		this.user = user;
+		this.id = id;
+		this.annonceur = annonceur;
 		this.annonce = annonce;
 		this.message = message;
 	}
@@ -71,8 +74,9 @@ public class Commentaire {
 	}
 	@Override
 	public String toString() {
-		return "Commentaire [user=" + user + ", annonce=" + annonce + ", message=" + message + "]";
+		return "Commentaire [id=" + id + ", Annonceur=" + annonceur + ", annonce=" + annonce + ", message=" + message + "]";
 	}
+	
 	
 	
 
