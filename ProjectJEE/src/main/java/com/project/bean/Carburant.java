@@ -12,7 +12,7 @@ public class Carburant {
 	@GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 	private String energie;
-	private AnnonceVoiture annonce;
+	private AnnonceVoiture annonceVoiture;
 	
 	
 	@Override
@@ -48,17 +48,17 @@ public class Carburant {
 		this.energie = energie;
 	}
 	public AnnonceVoiture getAnnonce() {
-		return annonce;
+		return annonceVoiture;
 	}
-	public void setAnnonce(AnnonceVoiture annonce) {
-		this.annonce = annonce;
+	public void setAnnonce(AnnonceVoiture annonceVoiture) {
+		this.annonceVoiture = annonceVoiture;
 	}
 	
-	public Carburant(long id, String energie, AnnonceVoiture annonce) {
+	public Carburant(long id, String energie, AnnonceVoiture annonceVoiture) {
 		super();
 		this.id = id;
 		this.energie = energie;
-		this.annonce = annonce;
+		this.annonceVoiture = annonceVoiture;
 	}
 	public Carburant() {
 		super();
@@ -66,7 +66,7 @@ public class Carburant {
 	}
 	@Override
 	public String toString() {
-		return "Carburant [id=" + id + ", energie=" + energie + ", annonce=" + annonce + "]";
+		return "Carburant [id=" + id + ", energie=" + energie + ", annonceVoiture=" + annonceVoiture + "]";
 	}
 	
 

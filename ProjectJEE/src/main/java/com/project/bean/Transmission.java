@@ -11,7 +11,7 @@ public class Transmission {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String libelle;
-	private AnnonceVoiture annonce;
+	private AnnonceVoiture annonceVoiture;
 	
 	@Override
 	public int hashCode() {
@@ -48,16 +48,16 @@ public class Transmission {
 		this.libelle = libelle;
 	}
 	public AnnonceVoiture getAnnonce() {
-		return annonce;
+		return annonceVoiture;
 	}
-	public void setAnnonce(AnnonceVoiture annonce) {
-		this.annonce = annonce;
+	public void setAnnonce(AnnonceVoiture annonceVoiture) {
+		this.annonceVoiture = annonceVoiture;
 	}
-	public Transmission(long id, String libelle, AnnonceVoiture annonce) {
+	public Transmission(long id, String libelle, AnnonceVoiture annonceVoiture) {
 		super();
 		this.id = id;
 		this.libelle = libelle;
-		this.annonce = annonce;
+		this.annonceVoiture = annonceVoiture;
 	}
 	public Transmission() {
 		super();
@@ -65,7 +65,7 @@ public class Transmission {
 	}
 	@Override
 	public String toString() {
-		return "Transmission [id=" + id + ", libelle=" + libelle + ", annonce=" + annonce + "]";
+		return "Transmission [id=" + id + ", libelle=" + libelle + ", annonceVoiture=" + annonceVoiture + "]";
 	}
 	
 	

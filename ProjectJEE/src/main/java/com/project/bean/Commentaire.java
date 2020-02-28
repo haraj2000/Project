@@ -10,9 +10,9 @@ public class Commentaire {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	private Review review;
 	private Annonceur annonceur;
-	private AnnonceVoiture annonce;
+	private AnnonceVoiture annonceVoiture;
+	private AnnonceImmobilier annonceImmobilier;
 	private String message;
 	
 	
@@ -45,14 +45,20 @@ public class Commentaire {
 	public Annonceur getAnnonceur() {
 		return annonceur;
 	}
-	public void setAnnonceur(Annonceur Annonceur) {
-		this.annonceur = Annonceur;
+	public void setAnnonceur(Annonceur annonceur) {
+		this.annonceur = annonceur;
 	}
-	public AnnonceVoiture getAnnonce() {
-		return annonce;
+	public AnnonceVoiture getAnnonceVoiture() {
+		return annonceVoiture;
 	}
-	public void setAnnonce(AnnonceVoiture annonce) {
-		this.annonce = annonce;
+	public void setAnnonceVoiture(AnnonceVoiture annonceVoiture) {
+		this.annonceVoiture = annonceVoiture;
+	}
+	public AnnonceImmobilier getAnnonceImmobilier() {
+		return annonceImmobilier;
+	}
+	public void setAnnonceImmobilier(AnnonceImmobilier annonceImmobilier) {
+		this.annonceImmobilier = annonceImmobilier;
 	}
 	public String getMessage() {
 		return message;
@@ -60,21 +66,10 @@ public class Commentaire {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
-	public Commentaire(long id, Annonceur Annonceur, AnnonceVoiture annonce, String message) {
-		super();
-		this.id = id;
-		this.annonceur = annonceur;
-		this.annonce = annonce;
-		this.message = message;
-	}
-	public Commentaire() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	@Override
 	public String toString() {
-		return "Commentaire [id=" + id + ", Annonceur=" + annonceur + ", annonce=" + annonce + ", message=" + message + "]";
+		return "Commentaire [id=" + id + ", annonceur=" + annonceur + ", annonceVoiture=" + annonceVoiture
+				+ ", annonceImmobilier=" + annonceImmobilier + ", message=" + message + "]";
 	}
 	
 	
