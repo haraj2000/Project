@@ -1,5 +1,5 @@
 package com.project.service.façade;
 
-public class TransmissionService {
+public interface TransmissionService {
 
 }
