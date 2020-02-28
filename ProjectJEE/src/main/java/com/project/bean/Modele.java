@@ -3,12 +3,13 @@ package com.project.bean;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 @Entity
 public class Modele 
 {
+   private String version;
    private String nom;
    private Date annee;
-   private String version;
    private Marque marque;
 public String getNom() {
 	return nom;
