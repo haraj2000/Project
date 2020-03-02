@@ -7,6 +7,5 @@ import com.project.bean.AnnonceImmobilier;
 
 @Repository
 public interface AnnonceimobilierDao extends JpaRepository<AnnonceImmobilier, Long> {
-	
-
+	public AnnonceImmobilier findById(int id);
 }

@@ -7,6 +7,6 @@ import com.project.bean.TypeAnnonce;
 
 @Repository
 public interface TypeAnnonceDao extends JpaRepository<TypeAnnonce, Long> {
-	
+	public TypeAnnonce findById(int id);
 
 }
