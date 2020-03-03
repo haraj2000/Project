@@ -12,7 +12,6 @@ public class AnnonceurImpl implements AnnonceurService {
 
 	@Override
 	public void save(Annonceur annonceur) {
-		// TODO Auto-generated method stub
 		
 	}
 
