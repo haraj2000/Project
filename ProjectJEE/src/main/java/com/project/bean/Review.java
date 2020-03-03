@@ -12,6 +12,8 @@ public class Review {
 	private long id;
 	@ManyToOne
 	private TypeReview typeReview;
+	@ManyToOne
+	private Annonceur annonceur;
 	
 	public long getId() {
 		return id;
@@ -25,10 +27,17 @@ public class Review {
 	public void setTypeReview(TypeReview typeReview) {
 		this.typeReview = typeReview;
 	}
-	public Review(long id, TypeReview typeReview) {
+	public Annonceur getAnnonceur() {
+		return annonceur;
+	}
+	public void setAnnonceur(Annonceur annonceur) {
+		this.annonceur = annonceur;
+	}
+	public Review(long id, TypeReview typeReview, Annonceur annonceur) {
 		super();
 		this.id = id;
 		this.typeReview = typeReview;
+		this.annonceur = annonceur;
 	}
 	public Review() {
 		super();

@@ -16,10 +16,10 @@ public class Annonceur {
 	private long id;
 	private String login;
 	private String password;
-	private String first_name; // la ilaha ila lah
-	private String Last_name;
+	private String firstName; // la ilaha ila lah
+	private String LastName;
 	private String mail;
-	private int phone_number;
+	private int phoneNumber;
 	private String country;
 	private String city;
 	private String address;
@@ -50,17 +50,17 @@ public class Annonceur {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getLast_name() {
-		return Last_name;
+	public String getLastName() {
+		return LastName;
 	}
-	public void setLast_name(String last_name) {
-		Last_name = last_name;
+	public void setLastName(String lastName) {
+		LastName = lastName;
 	}
 	public String getMail() {
 		return mail;
@@ -69,10 +69,10 @@ public class Annonceur {
 		this.mail = mail;
 	}
 	public int getPhone_number() {
-		return phone_number;
+		return phoneNumber;
 	}
 	public void setPhone_number(int phone_number) {
-		this.phone_number = phone_number;
+		this.phoneNumber = phone_number;
 	}
 	public String getCountry() {
 		return country;
@@ -117,18 +117,18 @@ public class Annonceur {
 		this.commentaire = commentaire;
 	}
 	
-	public Annonceur(long id, String login, String password, String first_name, String last_name, String mail,
-			int phone_number, String country, String city, String address, TypeAnnonceur typeAnnonceur,
+	public Annonceur(long id, String login, String password, String firstName, String lastName, String mail,
+			int phoneNumber, String country, String city, String address, TypeAnnonceur typeAnnonceur,
 			List<AnnonceImmobilier> annonceImmobilier, List<AnnonceVoiture> annonceVoiture,
 			List<Commentaire> commentaire) {
 		super();
 		this.id = id;
 		this.login = login;
 		this.password = password;
-		this.first_name = first_name;
-		Last_name = last_name;
+		this.firstName = firstName;
+		LastName = lastName;
 		this.mail = mail;
-		this.phone_number = phone_number;
+		this.phoneNumber = phoneNumber;
 		this.country = country;
 		this.city = city;
 		this.address = address;
