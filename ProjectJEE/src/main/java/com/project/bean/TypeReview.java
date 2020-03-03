@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class TypeReview {
@@ -12,6 +13,8 @@ public class TypeReview {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private int nbrStars;
+	@OneToMany
+	private Review review;
 	public long getId() {
 		return id;
 	}
@@ -25,11 +28,21 @@ public class TypeReview {
 	public void setNbrStars(int nbrStars) {
 		this.nbrStars = nbrStars;
 	}
-	public TypeReview(long id, int nbrStars) {
+	public Review getReview() {
+		return review;
+	}
+
+	public void setReview(Review review) {
+		this.review = review;
+	}
+
+	public TypeReview(long id, int nbrStars, Review review) {
 		super();
 		this.id = id;
 		this.nbrStars = nbrStars;
+		this.review = review;
 	}
+
 	public TypeReview() {
 		super();
 	}

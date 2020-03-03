@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class TypeAnnonceur {
@@ -12,7 +13,8 @@ public class TypeAnnonceur {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String libelle;
-	
+	@OneToMany
+	private Annonceur annonceur;
 	
 	public String getLibelle() {
 		return libelle;
@@ -26,11 +28,17 @@ public class TypeAnnonceur {
 	public void setId(long id) {
 		this.id = id;
 	}
-	
-	public TypeAnnonceur(long id, String libelle) {
+	public Annonceur getAnnonceur() {
+		return annonceur;
+	}
+	public void setAnnonceur(Annonceur annonceur) {
+		this.annonceur = annonceur;
+	}
+	public TypeAnnonceur(long id, String libelle, Annonceur annonceur) {
 		super();
 		this.id = id;
 		this.libelle = libelle;
+		this.annonceur = annonceur;
 	}
 	public TypeAnnonceur() {
 		super();
