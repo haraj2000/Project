@@ -7,6 +7,8 @@ import com.project.bean.TypeReview;
 
 public interface TypeReviewService {
 
+	public void save(TypeReview typeReview);
+	public List<TypeReview> findAll();
 	public TypeReview findByReview(Review review);
 	public List<TypeReview> fidnByNbrStars (int nbrstars);
 	
