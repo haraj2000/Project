@@ -35,7 +35,7 @@ public class Annonceur {
 	public long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getLogin() {
@@ -117,7 +117,7 @@ public class Annonceur {
 		this.commentaire = commentaire;
 	}
 	
-	public Annonceur(long id, String login, String password, String firstName, String lastName, String mail,
+	public Annonceur(Long id, String login, String password, String firstName, String lastName, String mail,
 			int phoneNumber, String country, String city, String address, TypeAnnonceur typeAnnonceur,
 			List<AnnonceImmobilier> annonceImmobilier, List<AnnonceVoiture> annonceVoiture,
 			List<Commentaire> commentaire) {
