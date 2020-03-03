@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 public class Annonceur {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	private String login;
 	private String password;
 	private String firstName; // la ilaha ila lah

@@ -9,7 +9,7 @@ public class Review {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@ManyToOne
 	private TypeReview typeReview;
 	@ManyToOne
