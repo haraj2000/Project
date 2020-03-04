@@ -54,13 +54,21 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 	}
 
 	@Override
-	public int restituer(String reference) {
-		return 0;
-	}
-
-	@Override
 	public List<AnnonceVoiture> findAll() {
 		return annonceVoitureDao.findAll();
 	}
+
+	@Override
+	public int restituer(String referance, BigDecimal prix) {
+		AnnonceVoiture foundedAnnonceVoiture = findByReferance(referance);
+		if (foundedAnnonceVoiture == null)
+			return -1;
+		else if (foundedAnnonceVoiture.getPrix() != null)
+			return -2;
+		else {
+			foundedAnnonceVoiture.setPrix(prix);
+			annonceVoitureDao.save(foundedAnnonceVoiture);
+			return 1;
+		}	}
 
 }

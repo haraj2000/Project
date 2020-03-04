@@ -20,7 +20,7 @@ public interface AnnonceVoitureService {
 	
 	public int save(AnnonceVoiture annonceVoiture);
 
-	public int restituer(String reference);
+	public int restituer(String reference , BigDecimal prix);
 
 	public List<AnnonceVoiture> findAll();
 }

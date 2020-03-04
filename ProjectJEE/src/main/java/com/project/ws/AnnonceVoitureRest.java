@@ -51,9 +51,9 @@ public class AnnonceVoitureRest {
 		return annonceVoitureService.save(annonceVoiture);
 	}
 
-	@PutMapping("/reference/{reference}")
-	public int restituer(@PathVariable String reference) {
-		return annonceVoitureService.restituer(reference);
+	@PutMapping("/reference/{reference}/prix/{prix}")
+	public int restituer(@PathVariable String reference,@PathVariable BigDecimal prix) {
+		return annonceVoitureService.restituer(reference, prix);
 	}
 
 	@GetMapping("/")
