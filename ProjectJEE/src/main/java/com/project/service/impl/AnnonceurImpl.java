@@ -14,7 +14,7 @@ import com.project.service.façade.AnnonceurService;
 public class AnnonceurImpl implements AnnonceurService {
 
 	@Autowired
-	AnnonceurDao annonceurDao;//another try
+	AnnonceurDao annonceurDao;//another try hh
 	
 	@Override
 	public int save(Annonceur annonceur) {
