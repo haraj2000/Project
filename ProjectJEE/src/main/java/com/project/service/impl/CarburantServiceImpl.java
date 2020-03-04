@@ -9,18 +9,5 @@ import com.project.dao.CarburantDao;
 import com.project.service.façade.CarburantService;
 
 public class CarburantServiceImpl implements CarburantService {
-	@Autowired
-	private CarburantDao carburantDao;
-
-
-	@Override
-	public void save(Carburant carburant) {
-		carburantDao.save(carburant);
-	}
-
-	@Override
-	public List<Carburant> findAll() {
-		return carburantDao.findAll() ;
-	}
-
+	
 }
