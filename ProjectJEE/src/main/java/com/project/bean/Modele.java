@@ -8,6 +8,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Modele {
+	@Id
 	private String version;
 	private String nom;
 	private int annee;

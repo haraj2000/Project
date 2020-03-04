@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 @Entity
 public class AnnonceVoiture {
@@ -22,13 +23,13 @@ public class AnnonceVoiture {
 	private long kilometrage;
 	private String couleur;	
 	
-	@OneToMany(mappedBy ="annonceVoiture")
+	@ManyToOne
 	private Carburant carburant;
-	@OneToMany(mappedBy ="annonceVoiture")
+	@ManyToOne
 	private Marque marque;
-	@OneToMany(mappedBy ="annonceVoiture")
+	@ManyToOne
 	private Transmission transmission;
-	@OneToMany(mappedBy ="annonceVoiture")
+	@ManyToOne
 	private Annonceur annonceur;
 	@OneToMany(mappedBy ="annonceVoiture")
 	private List<Commentaire> commentaires= new ArrayList<>();
