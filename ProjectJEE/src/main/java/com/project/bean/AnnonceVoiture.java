@@ -33,6 +33,7 @@ public class AnnonceVoiture {
 	@OneToMany(mappedBy ="annonceVoiture")
 	private List<Commentaire> commentaires= new ArrayList<>();
 	
+	
 	public long getId() {
 		return id;
 	}
