@@ -48,12 +48,12 @@ public class ReviewImpl implements ReviewService {
 	}
 
 	@Override
-	public int update(String reference, TypeReview typeReview, Date dateReview) {
-		Review reviewFounded = findByReference(reference);
+	public int update(Review review) {
+		Review reviewFounded = findByReference(review.getReference());
 		if( reviewFounded == null)
 			return -1;
 		else {
-			reviewFounded.setTypeReview(typeReview);
+			reviewFounded.setTypeReview(review.getTypeReview());
 			reviewFounded.setDateReview(new Date());
 			reviewDao.save(reviewFounded);
 			return 1;

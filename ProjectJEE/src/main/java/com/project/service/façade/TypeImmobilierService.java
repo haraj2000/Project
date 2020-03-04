@@ -6,7 +6,7 @@ import com.project.bean.TypeImmobilier;
 
 public interface TypeImmobilierService {
 
-	public TypeImmobilier findById(int id);
+	public TypeImmobilier findByLibelle(String libelle);
 
 	public void save(TypeImmobilier typeImmobilier);
 

@@ -10,8 +10,7 @@ public interface AnnonceurService {
 	public int save(Annonceur annonceur);
 	public List<Annonceur> findAll();
 	public int deleteByMail(String mail);
-	public int update(String mail,String firstName, String lastName, int phoneNumber, String country, String city, String address);
-	
+	public int update(Annonceur annonceur);	
 	public List<Annonceur> findByFisrtName(String firstName);
 	public List<Annonceur> findByLastName(String lastName);
 	public Annonceur findByMail(String mail);

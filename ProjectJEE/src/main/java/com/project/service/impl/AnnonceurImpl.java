@@ -50,21 +50,20 @@ public class AnnonceurImpl implements AnnonceurService {
 	}
 
 	@Override
-	public int update(String mail, String firstName, String lastName, int phoneNumber, String country, String city,
-			String address) {
-		Annonceur annonceurFounded = findByMail(mail);
+	public int update(Annonceur annonceur) {
+		Annonceur annonceurFounded = findByMail(annonceur.getMail());
 		if( annonceurFounded != null)
 			return -1;
 		else {
-			annonceurFounded.setFirstName(firstName);
-			annonceurFounded.setLastName(lastName);
-			annonceurFounded.setPhoneNumber(phoneNumber);
-			annonceurFounded.setCountry(country);
-			annonceurFounded.setCity(city);
-			annonceurFounded.setAddress(address);
+			annonceurFounded.setFirstName(annonceur.getFirstName());
+			annonceurFounded.setLastName(annonceur.getLastName());
+			annonceurFounded.setPhoneNumber(annonceur.getPhoneNumber());
+			annonceurFounded.setCountry(annonceur.getCountry());
+			annonceurFounded.setCity(annonceur.getCity());
+			annonceurFounded.setAddress(annonceur.getAddress());
 			annonceurDao.save(annonceurFounded);
+			return 1;
 		}
-		return 0;
 	}
 
 	@Override

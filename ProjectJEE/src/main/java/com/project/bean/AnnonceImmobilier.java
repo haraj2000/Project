@@ -5,7 +5,8 @@ import java.util.Date;
 import javax.persistence.ManyToOne;
 
 public class AnnonceImmobilier {
-	private int id;
+	private long id;
+	private String reference;
 	private float prix;
 	private float surface;
 	private String titreAnnonce;
@@ -35,7 +36,7 @@ public class AnnonceImmobilier {
 	public void setAdresseImm(String adresseImm) {
 		this.adresseImm = adresseImm;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	public void setId(int id) {
@@ -71,6 +72,51 @@ public class AnnonceImmobilier {
 	public void setVilleImm(String villeImm) {
 		this.villeImm = villeImm;
 	}
+	public String getReference() {
+		return reference;
+	}
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
+	public AnnonceImmobilier(long id, String reference, float prix, float surface, String titreAnnonce,
+			Date dateAnnonce, String adresseImm, String villeImm, Annonceur annonceur, TypeImmobilier typeImmobilier) {
+		super();
+		this.id = id;
+		this.reference = reference;
+		this.prix = prix;
+		this.surface = surface;
+		this.titreAnnonce = titreAnnonce;
+		this.dateAnnonce = dateAnnonce;
+		this.adresseImm = adresseImm;
+		this.villeImm = villeImm;
+		this.annonceur = annonceur;
+		this.typeImmobilier = typeImmobilier;
+	}
+	public AnnonceImmobilier() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (id ^ (id >>> 32));
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AnnonceImmobilier other = (AnnonceImmobilier) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+	
 	
 	 
 

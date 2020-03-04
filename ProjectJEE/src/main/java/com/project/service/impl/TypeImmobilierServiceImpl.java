@@ -11,8 +11,8 @@ public class TypeImmobilierServiceImpl implements TypeAnnonceService {
 	private TypeAnnonceDao typeAnnonceDao;
 
 	@Override
-	public TypeAnnonce findById(int id) {
-		return typeAnnonceDao.findById(id) ;
+	public TypeAnnonce findByLibelle(String libelle) {
+		return typeAnnonceDao.findByLibelle(libelle) ;
 	}
 
 	@Override

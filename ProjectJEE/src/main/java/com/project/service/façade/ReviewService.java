@@ -11,7 +11,7 @@ public interface ReviewService {
 
 	public int save(Review review);
 	public List<Review> findAll();
-	public int update(String reference, TypeReview typeReview, Date dateReview);
+	public int update(Review review);
 	
 	public Review findByReference(String reference);
 	public List<Review> findByAnnonceur(Annonceur annonceur);

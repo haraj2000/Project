@@ -6,10 +6,11 @@ import com.project.bean.TypeAnnonce;
 
 public interface TypeAnnonceService {
 
-	public TypeAnnonce findById(int id);
+	public TypeAnnonce findByLibelle(String libelle);
 
 	public void save(TypeAnnonce typeAnnonce);
 
 	public List<TypeAnnonce> findAll();
+
 
 }

@@ -7,5 +7,5 @@ import com.project.bean.TypeImmobilier;
 
 @Repository
 public interface TypeImmobilierDao extends JpaRepository<TypeImmobilier, Long> {
-	public TypeImmobilier findById(int id);
+	public TypeImmobilier findByLibelle(int libelle);
 }
