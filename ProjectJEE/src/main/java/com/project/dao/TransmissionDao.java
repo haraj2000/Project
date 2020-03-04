@@ -11,6 +11,7 @@ import com.project.bean.Transmission;
 @Repository
 public interface TransmissionDao extends JpaRepository<Transmission, Long> {
 	public Transmission findById(long id);
+	public Transmission findByLibelle(String libelle);
 	public List<Transmission> findByAnnonceVoitureReferance(String referance);
 
 }

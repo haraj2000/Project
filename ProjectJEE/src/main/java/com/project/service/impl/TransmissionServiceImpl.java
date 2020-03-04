@@ -1,5 +1,5 @@
 package com.project.service.impl;
 
-public interface TransmissionServiceImpl {
+public class TransmissionServiceImpl {
 
 }

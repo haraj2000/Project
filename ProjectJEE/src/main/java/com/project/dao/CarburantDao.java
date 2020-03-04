@@ -11,6 +11,7 @@ import com.project.bean.Carburant;
 public interface CarburantDao extends JpaRepository<Carburant, Long> {
 	
 	public Carburant findById(long id);
+	public Carburant findByLibelle(String libelle);
     public List<Carburant> findByAnnonceVoitureReferance(String referance);
 
 }
