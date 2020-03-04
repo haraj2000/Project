@@ -23,5 +23,4 @@ public interface AnnonceVoitureDao extends JpaRepository<AnnonceVoiture, Long> {
 	public List<AnnonceVoiture> findByCouleur(String couleur);
 
 	
-	
 }
