@@ -11,7 +11,7 @@ import com.project.bean.Commentaire;
 
 @Repository
 public interface CommentaireDao extends JpaRepository<Commentaire, Long> {
-	public Commentaire findById(long id);
+	
 	public List<Commentaire> findByAnnonceVoitureReferance(String referance);
 	public List<Commentaire> findByAnnonceImmobilierReferance(String referance);
 

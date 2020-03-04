@@ -10,8 +10,9 @@ import com.project.bean.Carburant;
 @Repository
 public interface CarburantDao extends JpaRepository<Carburant, Long> {
 	
-	public Carburant findById(long id);
 	public Carburant findByLibelle(String libelle);
     public List<Carburant> findByAnnonceVoitureReferance(String referance);
+    public List<Carburant> findByAnnonceVoitureReferanceAndLibelle(String referance, String libelle);
+    
 
 }
