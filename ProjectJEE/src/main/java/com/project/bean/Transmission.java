@@ -1,9 +1,13 @@
 package com.project.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -12,8 +16,8 @@ public class Transmission {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String libelle;
-    @OneToOne
-	private AnnonceVoiture annonceVoiture;
+    @OneToMany(mappedBy = "transmission")
+    private List<AnnonceVoiture> annonceVoiture= new ArrayList<>();
 	
 	@Override
 	public int hashCode() {
@@ -50,13 +54,16 @@ public class Transmission {
 		this.libelle = libelle;
 	}
 
-	public AnnonceVoiture getAnnonce() {
+
+	
+	public List<AnnonceVoiture> getAnnonceVoiture() {
 		return annonceVoiture;
 	}
-	public void setAnnonce(AnnonceVoiture annonceVoiture) {
+	public void setAnnonceVoiture(List<AnnonceVoiture> annonceVoiture) {
 		this.annonceVoiture = annonceVoiture;
 	}
-	public Transmission(long id, String libelle, AnnonceVoiture annonceVoiture) {
+	
+	public Transmission(long id, String libelle, List<AnnonceVoiture> annonceVoiture) {
 		super();
 		this.id = id;
 		this.libelle = libelle;

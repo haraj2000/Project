@@ -1,9 +1,13 @@
 package com.project.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -14,8 +18,8 @@ public class Carburant {
     private long id;
 	private String libelle;
 	private String energie;
-	@OneToOne
-	private AnnonceVoiture annonceVoiture;
+	@OneToMany(mappedBy = "carburant")
+	private List<AnnonceVoiture> annonceVoiture= new ArrayList<>();
 	
 	
 	@Override
@@ -50,16 +54,18 @@ public class Carburant {
 	public void setEnergie(String energie) {
 		this.energie = energie;
 	}
-	public AnnonceVoiture getAnnonce() {
+
+	public List<AnnonceVoiture> getAnnonceVoiture() {
 		return annonceVoiture;
 	}
-	public void setAnnonce(AnnonceVoiture annonceVoiture) {
+	public void setAnnonceVoiture(List<AnnonceVoiture> annonceVoiture) {
 		this.annonceVoiture = annonceVoiture;
 	}
 	
-	public Carburant(long id, String energie, AnnonceVoiture annonceVoiture) {
+	public Carburant(long id, String libelle, String energie, List<AnnonceVoiture> annonceVoiture) {
 		super();
 		this.id = id;
+		this.libelle = libelle;
 		this.energie = energie;
 		this.annonceVoiture = annonceVoiture;
 	}
@@ -69,14 +75,14 @@ public class Carburant {
 	}
 	public String getLibelle() {
 		return libelle;}
+	
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
 	@Override
 	public String toString() {
 		return "Carburant [id=" + id + ", energie=" + energie + ", annonceVoiture=" + annonceVoiture + "]";
 	}
-	public void setLibelle(String libelle) {
-		this.libelle = libelle;
-	}
-	
 	
 
 }
