@@ -18,7 +18,7 @@ public class Transmission {
 	private String libelle;
     @OneToMany(mappedBy = "transmission")
     private List<AnnonceVoiture> annonceVoiture= new ArrayList<>();
-	
+	 
 	@Override
 	public int hashCode() {
 		final int prime = 31;

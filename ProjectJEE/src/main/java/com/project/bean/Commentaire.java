@@ -16,7 +16,7 @@ public class Commentaire {
 	@ManyToOne
 	private Annonceur annonceur;
 	@ManyToOne
-	private AnnonceVoiture annonceVoiture;
+	private AnnonceVoiture annonceVoiture; 
 	@ManyToOne
 	private AnnonceImmobilier annonceImmobilier;
 	private String message;

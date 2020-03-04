@@ -20,6 +20,7 @@ public class Carburant {
 	private String energie;
 	@OneToMany(mappedBy = "carburant")
 	private List<AnnonceVoiture> annonceVoiture= new ArrayList<>();
+
 	
 	
 	@Override
