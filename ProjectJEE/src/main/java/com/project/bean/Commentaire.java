@@ -25,7 +25,6 @@ public class Commentaire {
 	private Date dateCommentaire;	
 		
 	
-	
 	public Date getDateCommentaire() {
 		return dateCommentaire;
 	}
