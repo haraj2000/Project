@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.project.bean.Carburant;
 import com.project.dao.CarburantDao;
 import com.project.service.façade.CarburantService;
@@ -16,44 +15,45 @@ public class CarburantServiceImpl implements CarburantService {
 
 	@Override
 	public Carburant findByLibelle(String libelle) {
-		// TODO Auto-generated method stub
-		return null;
+		return carburantDao.findByLibelle(libelle);
 	}
 
 	@Override
 	public Carburant findByEnergie(String energie) {
-		// TODO Auto-generated method stub
-		return null;
+	 return carburantDao.findByEnergie(energie);
 	}
 
 	@Override
 	public List<Carburant> findByAnnonceVoitureReferance(String referance) {
-		// TODO Auto-generated method stub
-		return null;
+		 return carburantDao.findByAnnonceVoitureReferance(referance);
 	}
 
 	@Override
 	public List<Carburant> findByAnnonceVoitureReferanceAndLibelle(String referance, String libelle) {
-		// TODO Auto-generated method stub
-		return null;
+		return carburantDao.findByAnnonceVoitureReferanceAndLibelle(referance,libelle);
 	}
 
 	@Override
-	public void save(Carburant carburant) {
-		// TODO Auto-generated method stub
+	public int save(Carburant carburant) {
+		Carburant foundedCarburant = findByLibelle(carburant.getLibelle());
+
+		if (foundedCarburant != null) {
+			return -1;
+		} else {
+			carburantDao.save(carburant);
+			return 1;
+		}
 		
 	}
 
 	@Override
 	public List<Carburant> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return carburantDao.findAll();
 	}
 
 	@Override
 	public Carburant deleteByLibelle(String libelle) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		return carburantDao.deleteByLibelle(libelle);
+		}
 
 }

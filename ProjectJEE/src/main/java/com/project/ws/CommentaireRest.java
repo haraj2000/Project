@@ -20,6 +20,11 @@ import com.project.service.façade.CommentaireService;
 public class CommentaireRest {
 	@Autowired
 	private CommentaireService commentaireService;
+	
+	@GetMapping("/titre/{titre}")
+	public Commentaire findByTitre(@PathVariable String titre) {
+		return commentaireService.findByTitre(titre);
+	}
 
 	@GetMapping("/AnnonceVoiture/referance/{referance}")
 	public List<Commentaire> findByAnnonceVoitureReferance(@PathVariable String referance) {
@@ -36,9 +41,10 @@ public class CommentaireRest {
 	}
  
 	@PostMapping("/")
-	public void save(@RequestBody Commentaire commentaire) {
-		commentaireService.save(commentaire);
+	public int save(@RequestBody Commentaire commentaire) {
+		return commentaireService.save(commentaire);
 	}
+
 
 
 }

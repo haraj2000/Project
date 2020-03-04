@@ -11,7 +11,7 @@ public interface CarburantService {
 	public Carburant findByEnergie(String energie);
     public List<Carburant> findByAnnonceVoitureReferance(String referance);
     public List<Carburant> findByAnnonceVoitureReferanceAndLibelle(String referance, String libelle);
-	public void save(Carburant carburant);
+	public int save(Carburant carburant);
 	public List<Carburant> findAll();
 	public Carburant deleteByLibelle(String libelle);
 

@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project.bean.Commentaire;
-import com.project.dao.AnnonceVoitureDao;
 import com.project.dao.CommentaireDao;
 import com.project.service.façade.CommentaireService;
 
@@ -16,27 +15,40 @@ public class CommentaireServiceImpl implements CommentaireService{
 	private CommentaireDao commentaireDao;
 
 	@Override
+	public Commentaire findByTitre(String titre) {
+		return commentaireDao.findByTitre(titre);
+	}
+	
+	
+	@Override
 	public List<Commentaire> findByAnnonceVoitureReferance(String referance) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public List<Commentaire> findByAnnonceImmobilierReferance(String referance) {
-		// TODO Auto-generated method stub
-		return null;
+		 return commentaireDao.findByAnnonceImmobilierReferance(referance);
 	}
 
 	@Override
-	public void save(Commentaire commentaire) {
-		// TODO Auto-generated method stub
+	public int save(Commentaire commentaire) {
+		Commentaire foundedCommentaire = findByTitre(commentaire.getTitre());
+
+		if (foundedCommentaire != null) {
+			return -1;
+		} else {
+			commentaireDao.save(commentaire);
+			return 1;
+		}
 		
 	}
 
 	@Override
 	public Commentaire deleteBytitre(String titre) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		return commentaireDao.deleteBytitre(titre);
+		}
+
+
+	
 
 }

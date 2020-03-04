@@ -45,8 +45,8 @@ public class CarburantRest {
 	}
 
     @PostMapping("/")
-	public void save(@RequestBody Carburant carburant) {
-		carburantService.save(carburant);
+	public int save(@RequestBody Carburant carburant) {
+		return carburantService.save(carburant);
 	}
     @GetMapping("/")
 	public List<Carburant> findAll() {

@@ -36,8 +36,8 @@ public class TransmissionRest {
 	}
 
 	@PostMapping("/")
-	public void save(@RequestBody Transmission transmission) {
-		transmissionService.save(transmission);
+	public int save(@RequestBody Transmission transmission) {
+		return transmissionService.save(transmission);
 	}
 
 	@GetMapping("/")
