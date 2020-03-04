@@ -13,9 +13,9 @@ import com.project.bean.TypeReview;
 @Repository
 public interface ReviewDao extends JpaRepository<Review, Long>{
 
-	public Review findByReference(String referenceReview);
+	public Review findByReference(String reference);
 	public List<Review> findByAnnonceur(Annonceur annonceur);
 	public List<Review> findByTypeReview(TypeReview typeReview);
 	public List<Review> findByDateReview(Date dateReview);
-	
+	public int deleteByReference(String reference);
 }

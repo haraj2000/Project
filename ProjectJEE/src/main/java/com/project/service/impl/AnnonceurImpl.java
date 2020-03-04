@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project.bean.Annonceur;
+import com.project.bean.TypeAnnonceur;
 import com.project.dao.AnnonceurDao;
 import com.project.service.façade.AnnonceurService;
 
@@ -44,6 +45,43 @@ public class AnnonceurImpl implements AnnonceurService {
 	@Override
 	public Annonceur findByMail(String mail) {
 		return annonceurDao.findByMail(mail);
+	}
+
+	@Override
+	public int deleteByLogin(String login) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(String login, String firstName, String lastName, int numberPhone, String country, String city,
+			String address) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Annonceur> findByFisrtName(String firstName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Annonceur> findByCountry(String country) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Annonceur> findByCity(String city) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Annonceur> findByTypeAnnonceur(TypeAnnonceur typeAnnonceur) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.project.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,30 @@ public class ReviewImpl implements ReviewService {
 	@Override
 	public List<Review> findByTypeReview(TypeReview typeReview) {
 		return reviewDao.findByTypeReview(typeReview);
+	}
+
+	@Override
+	public int update(String reference, TypeReview typeReview, Date dateReview) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Review findByReference(String reference) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> findByDateReview(Date dateReview) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int deleteByReference(String reference) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
