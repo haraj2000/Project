@@ -6,7 +6,7 @@ import com.project.bean.Annonceur;
 
 public interface AnnonceurService {
 
-	public void save(Annonceur annonceur);
+	public int save(Annonceur annonceur);
 	public List<Annonceur> findAll();
 	
 	public Annonceur findByLogin(String login);

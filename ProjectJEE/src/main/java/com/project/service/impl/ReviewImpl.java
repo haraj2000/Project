@@ -13,7 +13,8 @@ import com.project.service.façade.ReviewService;
 public class ReviewImpl implements ReviewService {
 
 	@Override
-	public void save(Review review) {
+	public int save(Review review) {
+		return 0;
 		// TODO Auto-generated method stub
 		
 	}

@@ -12,7 +12,8 @@ import com.project.service.façade.TypeReviewService;
 public class TypeReviewImpl implements TypeReviewService{
 
 	@Override
-	public void save(TypeReview typeReview) {
+	public int save(TypeReview typeReview) {
+		return 0;
 		// TODO Auto-generated method stub
 		
 	}
