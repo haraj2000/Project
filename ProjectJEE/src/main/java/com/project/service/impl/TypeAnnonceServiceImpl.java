@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.project.bean.TypeAnnonce;
 import com.project.dao.TypeAnnonceDao;
-import com.project.service.façade.TypeAnnonceService;
+import com.project.service.facade.TypeAnnonceService;
 
 public class TypeAnnonceServiceImpl implements TypeAnnonceService {
 	

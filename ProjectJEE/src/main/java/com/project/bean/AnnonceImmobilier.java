@@ -1,10 +1,19 @@
 package com.project.bean;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
+@Entity
 public class AnnonceImmobilier {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String reference;
 	private float prix;
@@ -18,18 +27,16 @@ public class AnnonceImmobilier {
 	@ManyToOne
 	private TypeImmobilier typeImmobilier;
 	
+	@OneToMany(mappedBy = "annonceImmobilier")
+	private List<Commentaire> commentaires;
+	
 	public TypeImmobilier getTypeImmobilier() {
 		return typeImmobilier;
 	}
 	public void setTypeImmobilier(TypeImmobilier typeImmobilier) {
 		this.typeImmobilier = typeImmobilier;
 	}
-	public Annonceur getAnnonceur() {
-		return annonceur;
-	}
-	public void setAnnonceur(Annonceur annonceur) {
-		this.annonceur = annonceur;
-	}
+
 	public String getAdresseImm() {
 		return adresseImm;
 	}
@@ -38,9 +45,6 @@ public class AnnonceImmobilier {
 	}
 	public long getId() {
 		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public float getPrix() {
 		return prix;
@@ -78,8 +82,31 @@ public class AnnonceImmobilier {
 	public void setReference(String reference) {
 		this.reference = reference;
 	}
+	
+	public Annonceur getAnnonceur() {
+		return annonceur;
+	}
+	public void setAnnonceur(Annonceur annonceur) {
+		this.annonceur = annonceur;
+	}
+	public List<Commentaire> getCommantaires() {
+		return commentaires;
+	}
+	public void setCommantaires(List<Commentaire> commantaires) {
+		this.commentaires = commantaires;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public List<Commentaire> getCommentaires() {
+		return commentaires;
+	}
+	public void setCommentaires(List<Commentaire> commentaires) {
+		this.commentaires = commentaires;
+	}
 	public AnnonceImmobilier(long id, String reference, float prix, float surface, String titreAnnonce,
-			Date dateAnnonce, String adresseImm, String villeImm, Annonceur annonceur, TypeImmobilier typeImmobilier) {
+			Date dateAnnonce, String adresseImm, String villeImm, Annonceur annonceur, TypeImmobilier typeImmobilier,
+			List<Commentaire> commentaires) {
 		super();
 		this.id = id;
 		this.reference = reference;
@@ -91,6 +118,7 @@ public class AnnonceImmobilier {
 		this.villeImm = villeImm;
 		this.annonceur = annonceur;
 		this.typeImmobilier = typeImmobilier;
+		this.commentaires = commentaires;
 	}
 	public AnnonceImmobilier() {
 		super();

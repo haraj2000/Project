@@ -1,4 +1,4 @@
-package com.project.service.façade;
+package com.project.service.facade;
 
 import java.util.List;
 
@@ -10,7 +10,6 @@ public interface TypeReviewService {
 	public int save(TypeReview typeReview);
 	public List<TypeReview> findAll();
 	public TypeReview findByReference(String reference);
-	public TypeReview findByReview(Review review);
 	public List<TypeReview> fidnByNbrStars (int nbrstars);
 	
 }

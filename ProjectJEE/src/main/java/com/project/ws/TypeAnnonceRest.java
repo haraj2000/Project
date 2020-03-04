@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.TypeAnnonce;
-import com.project.service.façade.TypeAnnonceService;
+import com.project.service.facade.TypeAnnonceService;
 
 @RestController
 @RequestMapping("/projet/TypeAnnonce")

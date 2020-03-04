@@ -1,17 +1,16 @@
-package com.project.service.façade;
+package com.project.dao;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.project.bean.AnnonceImmobilier;
 
-public interface AnnonceImmobilierService {
-
+@Repository
+public interface AnnonceImmobilierDao extends JpaRepository<AnnonceImmobilier, Long> {
 	public AnnonceImmobilier findByReference(String reference);
-	public int save(AnnonceImmobilier annonceImmobilier);
-	public List<AnnonceImmobilier> findAll();
-	public int update(AnnonceImmobilier annonceImmobilier);
 	public AnnonceImmobilier deleteByReference(String reference);
 	public AnnonceImmobilier findByPrix(String prix);
 	public AnnonceImmobilier findByTitreAnnonce(String titreAnnonce);
 	public AnnonceImmobilier findByVilleImm(String villeImm);
+	
 }

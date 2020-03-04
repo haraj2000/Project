@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.project.bean.Carburant;
 import com.project.dao.CarburantDao;
-import com.project.service.façade.CarburantService;
+import com.project.service.facade.CarburantService;
 
 @Service
 public class CarburantServiceImpl implements CarburantService {

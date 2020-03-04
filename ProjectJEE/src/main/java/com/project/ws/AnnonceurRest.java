@@ -3,16 +3,18 @@ package com.project.ws;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.Annonceur;
 import com.project.bean.TypeAnnonceur;
-import com.project.service.façade.AnnonceurService;
+import com.project.service.facade.AnnonceurService;
 
 @RestController
 @RequestMapping("project/Annonceur")
@@ -26,39 +28,39 @@ public class AnnonceurRest {
 		return annonceurService.save(annonceur);
 	}
 
-	@GetMapping("/")
+	@GetMapping("/all")
 	public List<Annonceur> findAll() {
 		return annonceurService.findAll();
 	}
-	@GetMapping("/Mail/{mail}")
+	@DeleteMapping("/mail/{mail}")
 	public int deleteByMail(@PathVariable String mail) {
 		return annonceurService.deleteByMail(mail);
 	}
-	@GetMapping("/Annonceur/{annonceur}")
+	@PutMapping("/")
 	public int update(@RequestBody Annonceur annonceur) {
 		return annonceurService.update(annonceur);
 	}
-	@GetMapping("/FirstName/{fisrtName}")
+	@GetMapping("/firstName/{fisrtName}")
 	public List<Annonceur> findByFisrtName(@PathVariable String firstName) {
-		return annonceurService.findByFisrtName(firstName);
+		return annonceurService.findByFirstName(firstName);
 	}
-	@GetMapping("/LastName/{lastName}")
+	@GetMapping("/lastName/{lastName}")
 	public List<Annonceur> findByLastName(@PathVariable String lastName) {
 		return annonceurService.findByLastName(lastName);
 	}
-	@GetMapping("/Mail/{mail}")
+	@GetMapping("/mail/{mail}")
 	public Annonceur findByMail(@PathVariable String mail) {
 		return annonceurService.findByMail(mail);
 	}
-	@GetMapping("/Country/{country}")
+	@GetMapping("/country/{country}")
 	public List<Annonceur> findByCountry(@PathVariable String country) {
 		return annonceurService.findByCountry(country);
 	}
-	@GetMapping("/City/{city}")
+	@GetMapping("/city/{city}")
 	public List<Annonceur> findByCity(@PathVariable String city) {
 		return annonceurService.findByCity(city);
 	}
-	@GetMapping("/TypeAnnonceur/{typeAnnonceur}")
+	@GetMapping("/")
 	public List<Annonceur> findByTypeAnnonceur(@RequestBody TypeAnnonceur typeAnnonceur) {
 		return annonceurService.findByTypeAnnonceur(typeAnnonceur);
 	}

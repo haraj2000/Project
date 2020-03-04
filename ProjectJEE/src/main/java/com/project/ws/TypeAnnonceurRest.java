@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.Annonceur;
 import com.project.bean.TypeAnnonceur;
-import com.project.service.façade.TypeAnnonceurService;
+import com.project.service.facade.TypeAnnonceurService;
 
 @RestController
 @RequestMapping("project/TypeAnnonceur")
@@ -29,10 +29,7 @@ public class TypeAnnonceurRest {
 	public List<TypeAnnonceur> findAll() {
 		return typeAnnonceurService.findAll();
 	}
-	@GetMapping("/Annonceur/{annonceur}")
-	public TypeAnnonceur findByAnnonceur(@RequestBody Annonceur annonceur) {
-		return typeAnnonceurService.findByAnnonceur(annonceur);
-	}
+	
 	@GetMapping("Libelle/{libelle}")
 	public TypeAnnonceur findByLibelle(@PathVariable String libelle) {
 		return typeAnnonceurService.findByLibelle(libelle);

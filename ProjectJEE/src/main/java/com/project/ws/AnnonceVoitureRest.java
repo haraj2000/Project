@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.AnnonceVoiture;
-import com.project.service.façade.AnnonceVoitureService;
+import com.project.service.facade.AnnonceVoitureService;
 
 @RestController
 @RequestMapping("project/AnnonceVoiture")
@@ -32,8 +32,8 @@ public class AnnonceVoitureRest {
 	}
 
 	@GetMapping("/prix/{prix}")
-	public List<AnnonceVoiture> findPrix(@PathVariable BigDecimal prix) {
-		return annonceVoitureService.findPrix(prix);
+	public List<AnnonceVoiture> findByPrix(@PathVariable BigDecimal prix) {
+		return annonceVoitureService.findByPrix(prix);
 	}
 
 	@GetMapping("/kilometrage/{kilometrage}")

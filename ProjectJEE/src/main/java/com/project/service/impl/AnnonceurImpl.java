@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.project.bean.Annonceur;
 import com.project.bean.TypeAnnonceur;
 import com.project.dao.AnnonceurDao;
-import com.project.service.façade.AnnonceurService;
+import com.project.service.facade.AnnonceurService;
 
 @Service
 public class AnnonceurImpl implements AnnonceurService {
@@ -67,8 +67,8 @@ public class AnnonceurImpl implements AnnonceurService {
 	}
 
 	@Override
-	public List<Annonceur> findByFisrtName(String firstName) {
-		return annonceurDao.findByFisrtName(firstName);
+	public List<Annonceur> findByFirstName(String firstName) {
+		return annonceurDao.findByFirstName(firstName);
 	}
 
 	@Override

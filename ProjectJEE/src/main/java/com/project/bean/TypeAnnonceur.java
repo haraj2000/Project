@@ -1,9 +1,12 @@
 package com.project.bean;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -13,8 +16,8 @@ public class TypeAnnonceur {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String libelle;
-	@OneToMany
-	private Annonceur annonceur;
+	@OneToMany(mappedBy = "typeAnnonceur")
+	private List<Annonceur> annonceurs;
 	
 	public String getLibelle() {
 		return libelle;
@@ -28,12 +31,7 @@ public class TypeAnnonceur {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Annonceur getAnnonceur() {
-		return annonceur;
-	}
-	public void setAnnonceur(Annonceur annonceur) {
-		this.annonceur = annonceur;
-	}
+	
 	public TypeAnnonceur(long id, String libelle) {
 		super();
 		this.id = id;

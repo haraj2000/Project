@@ -3,19 +3,21 @@ package com.project.ws;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.AnnonceImmobilier;
-import com.project.service.façade.AnnonceImmobilierService;
+import com.project.service.facade.AnnonceImmobilierService;
 
 @RestController
 @RequestMapping("/projet/AnnonceImmobilier")
-public class AnnonceImmpbilierRest {
+public class AnnonceImmobilierRest {
 	
 	@Autowired
 	private AnnonceImmobilierService annonceImmobilierService;
@@ -35,12 +37,12 @@ public class AnnonceImmpbilierRest {
 		return annonceImmobilierService.findAll();
 	}
 
-	@GetMapping("/AnnonceImmobilier/{AnnonceImmobilier}")
+	@PutMapping("/")
 	public int update(@RequestBody AnnonceImmobilier annonceImmobilier) {
 		return annonceImmobilierService.update(annonceImmobilier);
 	}
 
-	@GetMapping("/reference/{reference}")
+	@DeleteMapping("/reference/{reference}")
 	public AnnonceImmobilier deleteByReference(@PathVariable String reference) {
 		return annonceImmobilierService.deleteByReference(reference);
 	}
@@ -56,7 +58,7 @@ public class AnnonceImmpbilierRest {
 	}
 
 	@GetMapping("/villeImm/{villeImm}")
-	public AnnonceImmobilier findByVilleImm(String villeImm) {
+	public AnnonceImmobilier findByVilleImm(@PathVariable String villeImm) {
 		return annonceImmobilierService.findByVilleImm(villeImm);
 	}
 

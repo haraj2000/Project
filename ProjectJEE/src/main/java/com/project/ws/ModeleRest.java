@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.Modele;
-import com.project.service.façade.ModeleService;
+import com.project.service.facade.ModeleService;
 
 @RestController
 @RequestMapping("project/Modele")
@@ -25,12 +25,12 @@ public class ModeleRest {
 		return modeleService.findByVersion(version);
 	}
 
-	@GetMapping("/version/{version}")
+	@GetMapping("/nom/{nom}")
 	public Modele findByNom(@PathVariable String nom) {
 		return modeleService.findByNom(nom);
 	}
 
-	@GetMapping("/version/{version}")
+	@GetMapping("/annee/{annee}")
 	public Modele findByAnnee(@PathVariable int annee) {
 		return modeleService.findByAnnee(annee);
 	}

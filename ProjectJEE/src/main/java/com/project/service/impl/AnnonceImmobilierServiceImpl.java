@@ -4,15 +4,17 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.project.bean.AnnonceImmobilier;
-import com.project.dao.AnnonceimobilierDao;
-import com.project.service.façade.AnnonceImmobilierService;
+import com.project.dao.AnnonceImmobilierDao;
+import com.project.service.facade.AnnonceImmobilierService;
 
+@Service
 public class AnnonceImmobilierServiceImpl  implements AnnonceImmobilierService{
 	
 	@Autowired
-	private AnnonceimobilierDao annonceImmobilierDao;
+	private AnnonceImmobilierDao annonceImmobilierDao;
 
 
 	@Override

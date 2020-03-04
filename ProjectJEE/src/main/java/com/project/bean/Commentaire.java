@@ -89,8 +89,10 @@ public class Commentaire {
 	@Override
 	public String toString() {
 		return "Commentaire [id=" + id + ", annonceur=" + annonceur + ", annonceVoiture=" + annonceVoiture
-				+ ", annonceImmobilier=" + annonceImmobilier + ", message=" + message + "]";
+				+ ", annonceImmobilier=" + annonceImmobilier + ", message=" + message + ", titre=" + titre
+				+ ", dateCommentaire=" + dateCommentaire + "]";
 	}
+	
 	
 	
 	

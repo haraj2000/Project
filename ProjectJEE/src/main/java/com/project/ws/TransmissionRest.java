@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.Transmission;
-import com.project.service.façade.TransmissionService;
+import com.project.service.facade.TransmissionService;
 
 @RestController
 @RequestMapping("project/Transmission")

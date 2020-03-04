@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.Carburant;
-import com.project.service.façade.CarburantService;
+import com.project.service.facade.CarburantService;
 
 @RestController
 @RequestMapping("project/Carburant")

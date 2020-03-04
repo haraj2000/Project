@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.TypeImmobilier;
-import com.project.service.façade.TypeImmobilierService;
+import com.project.service.facade.TypeImmobilierService;
 
 @RestController
 @RequestMapping("/projet/TypeImmobilier")

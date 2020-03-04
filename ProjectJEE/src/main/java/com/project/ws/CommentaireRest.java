@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.Commentaire;
-import com.project.service.façade.CommentaireService;
+import com.project.service.facade.CommentaireService;
 
 
 @RestController

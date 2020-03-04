@@ -1,4 +1,4 @@
-package com.project.service.façade;
+package com.project.service.facade;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -12,7 +12,7 @@ public interface AnnonceVoitureService {
 
 	public List<AnnonceVoiture> findByMarqueNom(String nom);
 	
-	public List<AnnonceVoiture> findPrix(BigDecimal prix);
+	public List<AnnonceVoiture> findByPrix(BigDecimal prix);
 	
 	public List<AnnonceVoiture> findByKilometrage(Long kilometrage);
 	

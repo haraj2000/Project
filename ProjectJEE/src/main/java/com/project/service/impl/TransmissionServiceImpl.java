@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.project.bean.Transmission;
 import com.project.dao.TransmissionDao;
-import com.project.service.façade.TransmissionService;
+import com.project.service.facade.TransmissionService;
 
 @Service
 public class TransmissionServiceImpl implements TransmissionService{

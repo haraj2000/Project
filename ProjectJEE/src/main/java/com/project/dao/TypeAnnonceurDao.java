@@ -9,7 +9,6 @@ import com.project.bean.TypeAnnonceur;
 @Repository
 public interface TypeAnnonceurDao extends JpaRepository<TypeAnnonceur, Long> {
 	
-	public TypeAnnonceur findByAnnonceur(Annonceur annonceur);
 	public TypeAnnonceur findByLibelle(String libelle);
 
 }

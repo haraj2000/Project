@@ -17,18 +17,18 @@ public class Annonceur {
 	private String mail;
 	private String password;
 	private String firstName; // la ilaha ila lah
-	private String LastName;
+	private String lastName;
 	private int phoneNumber;
 	private String country;
 	private String city;
 	private String address;
 	@ManyToOne
 	private TypeAnnonceur typeAnnonceur;
-	@OneToMany
+	@OneToMany(mappedBy = "annonceur")
 	private List<AnnonceImmobilier> annonceImmobilier;
-	@OneToMany
+	@OneToMany(mappedBy = "annonceur")
 	private List<AnnonceVoiture> annonceVoiture;
-	@OneToMany
+	@OneToMany(mappedBy = "annonceur")
 	private List<Commentaire> commentaire;
 	
 	public long getId() {
@@ -50,10 +50,10 @@ public class Annonceur {
 		this.firstName = firstName;
 	}
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 	public String getMail() {
 		return mail;
@@ -116,7 +116,7 @@ public class Annonceur {
 		this.id = id;
 		this.password = password;
 		this.firstName = firstName;
-		LastName = lastName;
+		this.lastName = lastName;
 		this.mail = mail;
 		this.phoneNumber = phoneNumber;
 		this.country = country;

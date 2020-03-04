@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.project.bean.Commentaire;
 import com.project.dao.CommentaireDao;
-import com.project.service.façade.CommentaireService;
+import com.project.service.facade.CommentaireService;
 
 @Service
 public class CommentaireServiceImpl implements CommentaireService{
@@ -27,7 +27,7 @@ public class CommentaireServiceImpl implements CommentaireService{
 
 	@Override
 	public List<Commentaire> findByAnnonceImmobilierReferance(String referance) {
-		 return commentaireDao.findByAnnonceImmobilierReferance(referance);
+		 return commentaireDao.findByAnnonceImmobilierReference(referance);
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.project.bean.Modele;
 import com.project.dao.ModeleDao;
-import com.project.service.façade.ModeleService;
+import com.project.service.facade.ModeleService;
 
 
 @Service

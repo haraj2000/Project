@@ -16,7 +16,7 @@ public interface AnnonceVoitureDao extends JpaRepository<AnnonceVoiture, Long> {
 
 	public List<AnnonceVoiture> findByMarqueNom(String nom);
 	
-	public List<AnnonceVoiture> findPrix(BigDecimal prix);
+	public List<AnnonceVoiture> findByPrix(BigDecimal prix);
 	
 	public List<AnnonceVoiture> findByKilometrage(Long kilometrage);
 	

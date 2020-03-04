@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.Marque;
-import com.project.service.façade.MarqueService;
+import com.project.service.facade.MarqueService;
 
 @RestController
 @RequestMapping("project/Marque")

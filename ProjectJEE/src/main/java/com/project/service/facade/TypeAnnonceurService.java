@@ -1,4 +1,4 @@
-package com.project.service.façade;
+package com.project.service.facade;
 
 import java.util.List;
 
@@ -9,6 +9,5 @@ public interface TypeAnnonceurService {
 
 	public int save(TypeAnnonceur typeAnnonceur);
 	public List<TypeAnnonceur> findAll();
-	public TypeAnnonceur findByAnnonceur(Annonceur annonceur);
 	public TypeAnnonceur findByLibelle(String libelle);
 }

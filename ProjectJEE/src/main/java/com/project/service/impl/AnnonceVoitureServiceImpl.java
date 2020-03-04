@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.project.bean.AnnonceVoiture;
 import com.project.dao.AnnonceVoitureDao;
-import com.project.service.façade.AnnonceVoitureService;
+import com.project.service.facade.AnnonceVoitureService;
 
 @Service
 
@@ -27,8 +27,8 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 	}
 
 	@Override
-	public List<AnnonceVoiture> findPrix(BigDecimal prix) {
-		return annonceVoitureDao.findPrix(prix);
+	public List<AnnonceVoiture> findByPrix(BigDecimal prix) {
+		return annonceVoitureDao.findByPrix(prix);
 	}
 
 	@Override
@@ -70,5 +70,5 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 			annonceVoitureDao.save(foundedAnnonceVoiture);
 			return 1;
 		}	}
-
 }
+

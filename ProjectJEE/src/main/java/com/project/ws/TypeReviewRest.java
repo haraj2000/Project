@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.bean.Review;
 import com.project.bean.TypeReview;
-import com.project.service.façade.TypeReviewService;
+import com.project.service.facade.TypeReviewService;
 
 @RestController
 @RequestMapping("project/TypeReview")
@@ -33,10 +33,7 @@ public class TypeReviewRest {
 	public TypeReview findByReference(@PathVariable String reference) {
 		return typeReviewService.findByReference(reference);
 	}
-	@GetMapping("/Review/{review}")
-	public TypeReview findByReview(@RequestBody Review review) {
-		return typeReviewService.findByReview(review);
-	}
+	
 	@GetMapping("/Nbrstars/{nbrstars}")
 	public List<TypeReview> fidnByNbrStars(@PathVariable int nbrstars) {
 		return typeReviewService.fidnByNbrStars(nbrstars);

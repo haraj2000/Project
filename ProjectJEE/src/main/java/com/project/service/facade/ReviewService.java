@@ -1,4 +1,4 @@
-package com.project.service.façade;
+package com.project.service.facade;
 
 import java.util.Date;
 import java.util.List;

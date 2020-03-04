@@ -8,26 +8,26 @@ import org.springframework.stereotype.Service;
 import com.project.bean.Review;
 import com.project.bean.TypeReview;
 import com.project.dao.TypeReviewDao;
-import com.project.service.façade.TypeReviewService;
+import com.project.service.facade.TypeReviewService;
 
 @Service
-public class TypeReviewImpl implements TypeReviewService{
+public class TypeReviewImpl implements TypeReviewService {
 
 	@Autowired
 	TypeReviewDao typeReviewDao;
-	
+
 	@Override
 	public int save(TypeReview typeReview) {
 		TypeReview typeReviewFounded = findByReference(typeReview.getReference());
-		if( typeReviewFounded != null)
+		if (typeReviewFounded != null)
 			return -1;
-		else if (typeReview.getNbrStars()>5)
+		else if (typeReview.getNbrStars() > 5)
 			return -2;
-		else if (typeReview.getNbrStars()<0)
+		else if (typeReview.getNbrStars() < 0)
 			return -3;
 		else {
 			typeReviewDao.save(typeReview);
-		return 1;
+			return 1;
 		}
 	}
 
@@ -36,14 +36,10 @@ public class TypeReviewImpl implements TypeReviewService{
 		return typeReviewDao.findAll();
 	}
 
-	@Override
-	public TypeReview findByReview(Review review) {
-		return typeReviewDao.findByReview(review);
-	}
 
 	@Override
 	public List<TypeReview> fidnByNbrStars(int nbrstars) {
-		return typeReviewDao.fidnByNbrStars(nbrstars);
+		return typeReviewDao.findByNbrStars(nbrstars);
 	}
 
 	@Override
