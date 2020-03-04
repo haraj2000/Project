@@ -3,6 +3,11 @@ package com.project.ws;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,26 +21,32 @@ public class ModeleRest {
 	@Autowired
 	private ModeleService modeleService;
 
-	public Marque findByVersion(String version) {
+	@GetMapping("/version/{version}")
+	public Marque findByVersion(@PathVariable String version) {
 		return modeleService.findByVersion(version);
 	}
 
-	public Marque findByNom(String nom) {
+	@GetMapping("/version/{version}")
+	public Marque findByNom(@PathVariable String nom) {
 		return modeleService.findByNom(nom);
 	}
 
-	public Marque findByAnnee(int annee) {
+	@GetMapping("/version/{version}")
+	public Marque findByAnnee(@PathVariable int annee) {
 		return modeleService.findByAnnee(annee);
 	}
 
-	public int save(Modele modele) {
+	@PostMapping("/")
+	public int save(@RequestBody Modele modele) {
 		return modeleService.save(modele);
 	}
 
-	public int restituer(String nom) {
+	@PutMapping("/nom/{nom}")
+	public int restituer(@PathVariable String nom) {
 		return modeleService.restituer(nom);
 	}
 
+	@GetMapping("/")
 	public List<Modele> findAll() {
 		return modeleService.findAll();
 	}

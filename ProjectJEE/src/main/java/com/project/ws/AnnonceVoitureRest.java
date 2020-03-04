@@ -4,6 +4,11 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,37 +21,44 @@ public class AnnonceVoitureRest {
 	@Autowired
 	private AnnonceVoitureService annonceVoitureService;
 
-	public AnnonceVoiture findByReferance(String referance) {
+	@GetMapping("/referance/{referance}")
+	public AnnonceVoiture findByReferance(@PathVariable String referance) {
 		return annonceVoitureService.findByReferance(referance);
 	}
 
-	public List<AnnonceVoiture> findByMarqueNom(String nom) {
+	@GetMapping("/Marque/nom/{nom}")
+	public List<AnnonceVoiture> findByMarqueNom(@PathVariable String nom) {
 		return annonceVoitureService.findByMarqueNom(nom);
 	}
 
-	public List<AnnonceVoiture> findPrix(BigDecimal prix) {
+	@GetMapping("/prix/{prix}")
+	public List<AnnonceVoiture> findPrix(@PathVariable BigDecimal prix) {
 		return annonceVoitureService.findPrix(prix);
 	}
 
-	public List<AnnonceVoiture> findByKilometrage(Long kilometrage) {
+	@GetMapping("/kilometrage/{kilometrage}")
+	public List<AnnonceVoiture> findByKilometrage(@PathVariable Long kilometrage) {
 		return annonceVoitureService.findByKilometrage(kilometrage);
 	}
 
-	public List<AnnonceVoiture> findByCouleur(String couleur) {
+	@GetMapping("/couleur/{couleur}")
+	public List<AnnonceVoiture> findByCouleur(@PathVariable String couleur) {
 		return annonceVoitureService.findByCouleur(couleur);
 	}
 
-	public int save(AnnonceVoiture annonceVoiture) {
+	@PostMapping("/")
+	public int save(@RequestBody AnnonceVoiture annonceVoiture) {
 		return annonceVoitureService.save(annonceVoiture);
 	}
 
-	public int restituer(String reference) {
+	@PutMapping("/reference/{reference}")
+	public int restituer(@PathVariable String reference) {
 		return annonceVoitureService.restituer(reference);
 	}
 
+	@GetMapping("/")
 	public List<AnnonceVoiture> findAll() {
 		return annonceVoitureService.findAll();
 	}
 
-	
 }
