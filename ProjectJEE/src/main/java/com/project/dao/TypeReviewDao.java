@@ -11,6 +11,7 @@ import com.project.bean.TypeReview;
 @Repository
 public interface TypeReviewDao extends JpaRepository<TypeReview, Long> {
 	
+	public TypeReview findByReference(String reference);
 	public TypeReview findByReview(Review review);
 	public List<TypeReview> fidnByNbrStars (int nbrstars);
 
