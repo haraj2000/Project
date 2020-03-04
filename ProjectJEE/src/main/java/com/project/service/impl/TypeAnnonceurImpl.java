@@ -29,17 +29,17 @@ public class TypeAnnonceurImpl implements TypeAnnonceurService {
 
 	@Override
 	public List<TypeAnnonceur> findAll() {
-		return null;
+		return typeAnnonceurDao.findAll();
 	}
 
 	@Override
-	public TypeAnnonceur findByAnnonceur(Annonceur typeAnnonceur) {
-		return null;
+	public TypeAnnonceur findByAnnonceur(Annonceur annonceur) {
+		return typeAnnonceurDao.findByAnnonceur(annonceur);
 	}
 
 	@Override
 	public TypeAnnonceur findByLibelle(String libelle) {
-		return null;
+		return typeAnnonceurDao.findByLibelle(libelle);
 	}
 
 }
