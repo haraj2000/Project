@@ -17,6 +17,7 @@ public class Commentaire {
 	private Annonceur annonceur;
 	@ManyToOne
 	private AnnonceVoiture annonceVoiture;
+	@ManyToOne
 	private AnnonceImmobilier annonceImmobilier;
 	private String message;
 	private String titre;

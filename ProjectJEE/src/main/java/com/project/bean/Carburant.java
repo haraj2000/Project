@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Carburant {
@@ -13,6 +14,7 @@ public class Carburant {
     private long id;
 	private String libelle;
 	private String energie;
+	@OneToOne
 	private AnnonceVoiture annonceVoiture;
 	
 	
