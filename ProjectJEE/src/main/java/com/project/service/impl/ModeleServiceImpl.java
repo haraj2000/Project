@@ -19,20 +19,17 @@ public class ModeleServiceImpl implements ModeleService {
 
 	@Override
 	public Marque findByVersion(String version) {
-		// TODO Auto-generated method stub
-		return null;
+		return modeleDao.findByVersion(version);
 	}
 
 	@Override
 	public Marque findByNom(String nom) {
-		// TODO Auto-generated method stub
-		return null;
+		return modeleDao.findByNom(nom);
 	}
 
 	@Override
 	public Marque findByAnnee(int annee) {
-		// TODO Auto-generated method stub
-		return null;
+		return modeleDao.findByAnnee(annee);
 	}
 
 	@Override
@@ -49,8 +46,7 @@ public class ModeleServiceImpl implements ModeleService {
 
 	@Override
 	public List<Modele> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return modeleDao.findAll();
 	}
 
 	

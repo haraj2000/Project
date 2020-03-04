@@ -18,32 +18,27 @@ public class MarqueServiceImpl implements MarqueService {
 
 	@Override
 	public Marque findByNom(String nom) {
-		// TODO Auto-generated method stub
-		return null;
+		return marqueDao.findByNom(nom);
 	}
 
 	@Override
 	public List<Marque> findByModeleVersion(String version) {
-		// TODO Auto-generated method stub
-		return null;
+		return marqueDao.findByModeleVersion(version);
 	}
 
 	@Override
 	public int save(Marque marque) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int restituer(String nom) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public List<Marque> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return marqueDao.findAll();
 	}
 
 	
