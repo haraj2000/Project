@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.bean.Marque;
 import com.project.bean.Modele;
 import com.project.dao.ModeleDao;
 import com.project.service.façade.ModeleService;
@@ -18,25 +17,30 @@ public class ModeleServiceImpl implements ModeleService {
 	private ModeleDao modeleDao;
 
 	@Override
-	public Marque findByVersion(String version) {
+	public Modele findByVersion(String version) {
 		return modeleDao.findByVersion(version);
 	}
 
 	@Override
-	public Marque findByNom(String nom) {
+	public Modele findByNom(String nom) {
 		return modeleDao.findByNom(nom);
 	}
 
 	@Override
-	public Marque findByAnnee(int annee) {
+	public Modele findByAnnee(int annee) {
 		return modeleDao.findByAnnee(annee);
 	}
 
 	@Override
 	public int save(Modele modele) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+		Modele foundedModele = findByVersion(modele.getVersion());
+
+		if (foundedModele != null) {
+			return -1;
+		} else {
+			modeleDao.save(modele);
+			return 1;
+		}	}
 
 	@Override
 	public int restituer(String nom) {

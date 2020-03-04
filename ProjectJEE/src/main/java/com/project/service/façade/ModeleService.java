@@ -7,11 +7,11 @@ import com.project.bean.Modele;
 
 public interface ModeleService {
 	
-public Marque findByVersion(String version);
+public Modele findByVersion(String version);
 	
-	public Marque findByNom(String nom);
+	public Modele findByNom(String nom);
 
-	public Marque findByAnnee(int annee);
+	public Modele findByAnnee(int annee);
 	
 	public int save(Modele modele);
 

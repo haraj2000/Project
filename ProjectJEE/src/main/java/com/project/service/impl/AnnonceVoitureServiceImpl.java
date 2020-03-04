@@ -10,7 +10,6 @@ import com.project.bean.AnnonceVoiture;
 import com.project.dao.AnnonceVoitureDao;
 import com.project.service.façade.AnnonceVoitureService;
 
-
 @Service
 
 public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
@@ -44,7 +43,14 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 
 	@Override
 	public int save(AnnonceVoiture annonceVoiture) {
-		return 0;
+		AnnonceVoiture foundedAnnonceVoiture = findByReferance(annonceVoiture.getReferance());
+
+		if (foundedAnnonceVoiture != null) {
+			return -1;
+		} else {
+			annonceVoitureDao.save(annonceVoiture);
+			return 1;
+		}
 	}
 
 	@Override
@@ -56,7 +62,5 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 	public List<AnnonceVoiture> findAll() {
 		return annonceVoitureDao.findAll();
 	}
-	
-
 
 }

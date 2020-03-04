@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.bean.Marque;
 import com.project.bean.Modele;
 import com.project.service.façade.ModeleService;
 
@@ -22,17 +21,17 @@ public class ModeleRest {
 	private ModeleService modeleService;
 
 	@GetMapping("/version/{version}")
-	public Marque findByVersion(@PathVariable String version) {
+	public Modele findByVersion(@PathVariable String version) {
 		return modeleService.findByVersion(version);
 	}
 
 	@GetMapping("/version/{version}")
-	public Marque findByNom(@PathVariable String nom) {
+	public Modele findByNom(@PathVariable String nom) {
 		return modeleService.findByNom(nom);
 	}
 
 	@GetMapping("/version/{version}")
-	public Marque findByAnnee(@PathVariable int annee) {
+	public Modele findByAnnee(@PathVariable int annee) {
 		return modeleService.findByAnnee(annee);
 	}
 

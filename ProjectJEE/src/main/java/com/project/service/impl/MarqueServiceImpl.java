@@ -9,7 +9,6 @@ import com.project.bean.Marque;
 import com.project.dao.MarqueDao;
 import com.project.service.façade.MarqueService;
 
-
 @Service
 
 public class MarqueServiceImpl implements MarqueService {
@@ -28,7 +27,14 @@ public class MarqueServiceImpl implements MarqueService {
 
 	@Override
 	public int save(Marque marque) {
-		return 0;
+		Marque foundedMarque = findByNom(marque.getNom());
+
+		if (foundedMarque != null) {
+			return -1;
+		} else {
+			marqueDao.save(marque);
+			return 1;
+		}
 	}
 
 	@Override
@@ -40,7 +46,5 @@ public class MarqueServiceImpl implements MarqueService {
 	public List<Marque> findAll() {
 		return marqueDao.findAll();
 	}
-
-	
 
 }
