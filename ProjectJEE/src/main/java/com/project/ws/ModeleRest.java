@@ -50,4 +50,6 @@ public class ModeleRest {
 		return modeleService.findAll();
 	}
 
+	
+	
 }
