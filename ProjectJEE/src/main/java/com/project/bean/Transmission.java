@@ -54,7 +54,6 @@ public class Transmission {
 		this.libelle = libelle;
 	}
 
-	
 	public List<AnnonceVoiture> getAnnonceVoiture() {
 		return annonceVoiture;
 	}

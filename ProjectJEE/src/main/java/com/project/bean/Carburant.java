@@ -21,6 +21,7 @@ public class Carburant {
 	@OneToMany(mappedBy = "carburant")
 	private List<AnnonceVoiture> annonceVoiture= new ArrayList<>();
 	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
