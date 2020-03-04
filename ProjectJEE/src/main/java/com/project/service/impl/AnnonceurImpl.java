@@ -14,7 +14,7 @@ import com.project.service.façade.AnnonceurService;
 public class AnnonceurImpl implements AnnonceurService {
 
 	@Autowired
-	AnnonceurDao annonceurDao;//another try hh
+	AnnonceurDao annonceurDao;
 	
 	@Override
 	public int save(Annonceur annonceur) {
@@ -45,8 +45,8 @@ public class AnnonceurImpl implements AnnonceurService {
 	}
 
 	@Override
-	public int deleteByLogin(String login) {
-		return annonceurDao.deleteByLogin(login);
+	public int deleteByMail(String mail) {
+		return annonceurDao.deleteByMail(mail);
 	}
 
 	@Override

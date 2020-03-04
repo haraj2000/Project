@@ -9,7 +9,7 @@ public interface AnnonceurService {
 
 	public int save(Annonceur annonceur);
 	public List<Annonceur> findAll();
-	public int deleteByLogin(String login);
+	public int deleteByMail(String mail);
 	public int update(String mail,String firstName, String lastName, int phoneNumber, String country, String city, String address);
 	
 	public List<Annonceur> findByFisrtName(String firstName);

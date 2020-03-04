@@ -18,5 +18,5 @@ public interface AnnonceurDao extends JpaRepository<Annonceur, Long> {
 	public List<Annonceur> findByCountry(String country);
 	public List<Annonceur> findByCity(String city);
 	public List<Annonceur> findByTypeAnnonceur(TypeAnnonceur typeAnnonceur);
-	public int deleteByLogin(String login);
+	public int deleteByMail(String mail);
 }
