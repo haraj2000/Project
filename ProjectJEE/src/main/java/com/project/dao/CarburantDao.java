@@ -14,5 +14,6 @@ public interface CarburantDao extends JpaRepository<Carburant, Long> {
     public List<Carburant> findByAnnonceVoitureReferance(String referance);
     public List<Carburant> findByAnnonceVoitureReferanceAndLibelle(String referance, String libelle);
     
+    
 
 }

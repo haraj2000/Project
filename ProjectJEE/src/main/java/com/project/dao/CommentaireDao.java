@@ -15,4 +15,5 @@ public interface CommentaireDao extends JpaRepository<Commentaire, Long> {
 	public List<Commentaire> findByAnnonceVoitureReferance(String referance);
 	public List<Commentaire> findByAnnonceImmobilierReferance(String referance);
 
+	
 }
