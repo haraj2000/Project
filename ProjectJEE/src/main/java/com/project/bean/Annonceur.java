@@ -23,7 +23,6 @@ public class Annonceur {
 	private String country;
 	private String city;
 	private String address;
-	
 	@ManyToOne
 	private TypeAnnonceur typeAnnonceur;
 	@OneToMany
@@ -32,6 +31,7 @@ public class Annonceur {
 	private List<AnnonceVoiture> annonceVoiture;
 	@OneToMany
 	private List<Commentaire> commentaire;
+	
 	public long getId() {
 		return id;
 	}

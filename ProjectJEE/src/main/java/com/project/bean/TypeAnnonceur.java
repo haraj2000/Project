@@ -11,7 +11,7 @@ public class TypeAnnonceur {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	private String libelle;
 	@OneToMany
 	private Annonceur annonceur;
@@ -22,10 +22,10 @@ public class TypeAnnonceur {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public Annonceur getAnnonceur() {

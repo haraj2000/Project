@@ -1,5 +1,7 @@
 package com.project.bean;
 
+import java.util.Date;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,16 +12,24 @@ public class Review {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private String reference;
 	@ManyToOne
 	private TypeReview typeReview;
+	private Date dateReview;
 	@ManyToOne
 	private Annonceur annonceur;
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
+	}
+	public String getReference() {
+		return reference;
+	}
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 	public TypeReview getTypeReview() {
 		return typeReview;
@@ -27,16 +37,25 @@ public class Review {
 	public void setTypeReview(TypeReview typeReview) {
 		this.typeReview = typeReview;
 	}
+	public Date getDateReview() {
+		return dateReview;
+	}
+	public void setDateReview(Date dateReview) {
+		this.dateReview = dateReview;
+	}
 	public Annonceur getAnnonceur() {
 		return annonceur;
 	}
 	public void setAnnonceur(Annonceur annonceur) {
 		this.annonceur = annonceur;
 	}
-	public Review(long id, TypeReview typeReview, Annonceur annonceur) {
+	
+	public Review(Long id, String reference, TypeReview typeReview, Date dateReview, Annonceur annonceur) {
 		super();
 		this.id = id;
+		this.reference = reference;
 		this.typeReview = typeReview;
+		this.dateReview = dateReview;
 		this.annonceur = annonceur;
 	}
 	public Review() {

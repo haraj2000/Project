@@ -11,16 +11,23 @@ public class TypeReview {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
+	private String reference;
 	private int nbrStars;
 	@OneToMany
 	private Review review;
-	public long getId() {
+	
+	public Long getId() {
 		return id;
 	}
-	
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
+	}
+	public String getReference() {
+		return reference;
+	}
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 	public int getNbrStars() {
 		return nbrStars;
@@ -31,18 +38,17 @@ public class TypeReview {
 	public Review getReview() {
 		return review;
 	}
-
 	public void setReview(Review review) {
 		this.review = review;
 	}
 
-	public TypeReview(long id, int nbrStars, Review review) {
+	public TypeReview(Long id, String reference, int nbrStars, Review review) {
 		super();
 		this.id = id;
+		this.reference = reference;
 		this.nbrStars = nbrStars;
 		this.review = review;
 	}
-
 	public TypeReview() {
 		super();
 	}
