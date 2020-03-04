@@ -11,6 +11,7 @@ public class Marque {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String nom;
+	
 	public long getId() {
 		return id;
 	}

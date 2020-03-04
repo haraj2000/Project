@@ -21,9 +21,14 @@ public class AnnonceVoiture {
 	private BigDecimal prix;
 	private long kilometrage;
 	private String couleur;	
-	private Carburant carburant;	
+	
+	@OneToMany(mappedBy ="annonceVoiture")
+	private Carburant carburant;
+	@OneToMany(mappedBy ="annonceVoiture")
 	private Marque marque;
+	@OneToMany(mappedBy ="annonceVoiture")
 	private Transmission transmission;
+	@OneToMany(mappedBy ="annonceVoiture")
 	private Annonceur annonceur;
 	@OneToMany(mappedBy ="annonceVoiture")
 	private List<Commentaire> commentaires= new ArrayList<>();
