@@ -18,9 +18,11 @@ public class AnnonceurImpl implements AnnonceurService {
 	
 	@Override
 	public int save(Annonceur annonceur) {
-		Annonceur annonceurFounded = findByLogin(annonceur.getLogin());
+		Annonceur annonceurFounded = findByMail(annonceur.getMail());
 		if( annonceurFounded != null)
 			return -1;
+		else if (annonceur.getPassword()==null)
+			return -2;
 		else {
 			annonceurDao.save(annonceur);
 		return 1;
@@ -30,11 +32,6 @@ public class AnnonceurImpl implements AnnonceurService {
 	@Override
 	public List<Annonceur> findAll() {
 		return annonceurDao.findAll();
-	}
-
-	@Override
-	public Annonceur findByLogin(String login) {
-		return annonceurDao.findByLogin(login);
 	}
 
 	@Override
@@ -49,39 +46,45 @@ public class AnnonceurImpl implements AnnonceurService {
 
 	@Override
 	public int deleteByLogin(String login) {
-		// TODO Auto-generated method stub
-		return 0;
+		return annonceurDao.deleteByLogin(login);
 	}
 
 	@Override
-	public int update(String login, String firstName, String lastName, int numberPhone, String country, String city,
+	public int update(String mail, String firstName, String lastName, int phoneNumber, String country, String city,
 			String address) {
-		// TODO Auto-generated method stub
+		Annonceur annonceurFounded = findByMail(mail);
+		if( annonceurFounded != null)
+			return -1;
+		else {
+			annonceurFounded.setFirstName(firstName);
+			annonceurFounded.setLastName(lastName);
+			annonceurFounded.setPhoneNumber(phoneNumber);
+			annonceurFounded.setCountry(country);
+			annonceurFounded.setCity(city);
+			annonceurFounded.setAddress(address);
+			annonceurDao.save(annonceurFounded);
+		}
 		return 0;
 	}
 
 	@Override
 	public List<Annonceur> findByFisrtName(String firstName) {
-		// TODO Auto-generated method stub
-		return null;
+		return annonceurDao.findByFisrtName(firstName);
 	}
 
 	@Override
 	public List<Annonceur> findByCountry(String country) {
-		// TODO Auto-generated method stub
-		return null;
+		return annonceurDao.findByCountry(country);
 	}
 
 	@Override
 	public List<Annonceur> findByCity(String city) {
-		// TODO Auto-generated method stub
-		return null;
+		return annonceurDao.findByCity(city);
 	}
 
 	@Override
 	public List<Annonceur> findByTypeAnnonceur(TypeAnnonceur typeAnnonceur) {
-		// TODO Auto-generated method stub
-		return null;
+		return annonceurDao.findByTypeAnnonceur(typeAnnonceur);
 	}
 
 }

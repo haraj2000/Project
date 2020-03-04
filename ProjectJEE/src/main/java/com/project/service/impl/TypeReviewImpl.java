@@ -18,9 +18,13 @@ public class TypeReviewImpl implements TypeReviewService{
 	
 	@Override
 	public int save(TypeReview typeReview) {
-		TypeReview typeReviewFounded = findByReview(typeReview.getReview());
+		TypeReview typeReviewFounded = findByReference(typeReview.getReference());
 		if( typeReviewFounded != null)
 			return -1;
+		else if (typeReview.getNbrStars()>5)
+			return -2;
+		else if (typeReview.getNbrStars()<0)
+			return -3;
 		else {
 			typeReviewDao.save(typeReview);
 		return 1;
@@ -40,6 +44,11 @@ public class TypeReviewImpl implements TypeReviewService{
 	@Override
 	public List<TypeReview> fidnByNbrStars(int nbrstars) {
 		return typeReviewDao.fidnByNbrStars(nbrstars);
+	}
+
+	@Override
+	public TypeReview findByReference(String reference) {
+		return typeReviewDao.findByReference(reference);
 	}
 
 }

@@ -20,10 +20,13 @@ public class ReviewImpl implements ReviewService {
 	
 	@Override
 	public int save(Review review) {
-		List<Review> reviewFounded = findByAnnonceur(review.getAnnonceur());
+		Review reviewFounded = findByReference(review.getReference());
 		if( reviewFounded != null)
 			return -1;
+		else if (review.getAnnonceur()==null)
+			return -2;
 		else {
+			review.setDateReview(new Date());
 			reviewDao.save(review);
 		return 1;
 		}
@@ -46,26 +49,30 @@ public class ReviewImpl implements ReviewService {
 
 	@Override
 	public int update(String reference, TypeReview typeReview, Date dateReview) {
-		// TODO Auto-generated method stub
-		return 0;
+		Review reviewFounded = findByReference(reference);
+		if( reviewFounded == null)
+			return -1;
+		else {
+			reviewFounded.setTypeReview(typeReview);
+			reviewFounded.setDateReview(new Date());
+			reviewDao.save(reviewFounded);
+			return 1;
+		}
 	}
 
 	@Override
 	public Review findByReference(String reference) {
-		// TODO Auto-generated method stub
-		return null;
+		return reviewDao.findByReference(reference);
 	}
 
 	@Override
 	public List<Review> findByDateReview(Date dateReview) {
-		// TODO Auto-generated method stub
-		return null;
+		return reviewDao.findByDateReview(dateReview);
 	}
 
 	@Override
 	public int deleteByReference(String reference) {
-		// TODO Auto-generated method stub
-		return 0;
+		return reviewDao.deleteByReference(reference);
 	}
 
 }

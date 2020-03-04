@@ -34,11 +34,10 @@ public class TypeAnnonceur {
 	public void setAnnonceur(Annonceur annonceur) {
 		this.annonceur = annonceur;
 	}
-	public TypeAnnonceur(long id, String libelle, Annonceur annonceur) {
+	public TypeAnnonceur(long id, String libelle) {
 		super();
 		this.id = id;
 		this.libelle = libelle;
-		this.annonceur = annonceur;
 	}
 	public TypeAnnonceur() {
 		super();

@@ -42,12 +42,11 @@ public class TypeReview {
 		this.review = review;
 	}
 
-	public TypeReview(Long id, String reference, int nbrStars, Review review) {
+	public TypeReview(Long id, String reference, int nbrStars) {
 		super();
 		this.id = id;
 		this.reference = reference;
 		this.nbrStars = nbrStars;
-		this.review = review;
 	}
 	public TypeReview() {
 		super();

@@ -14,11 +14,10 @@ public class Annonceur {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String login;
+	private String mail;
 	private String password;
 	private String firstName; // la ilaha ila lah
 	private String LastName;
-	private String mail;
 	private int phoneNumber;
 	private String country;
 	private String city;
@@ -37,12 +36,6 @@ public class Annonceur {
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	public String getLogin() {
-		return login;
-	}
-	public void setLogin(String login) {
-		this.login = login;
 	}
 	public String getPassword() {
 		return password;
@@ -68,10 +61,10 @@ public class Annonceur {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-	public int getPhone_number() {
+	public int getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhone_number(int phone_number) {
+	public void setPhoneNumber(int phone_number) {
 		this.phoneNumber = phone_number;
 	}
 	public String getCountry() {
@@ -118,12 +111,9 @@ public class Annonceur {
 	}
 	
 	public Annonceur(Long id, String login, String password, String firstName, String lastName, String mail,
-			int phoneNumber, String country, String city, String address, TypeAnnonceur typeAnnonceur,
-			List<AnnonceImmobilier> annonceImmobilier, List<AnnonceVoiture> annonceVoiture,
-			List<Commentaire> commentaire) {
+			int phoneNumber, String country, String city, String address, TypeAnnonceur typeAnnonceur) {
 		super();
 		this.id = id;
-		this.login = login;
 		this.password = password;
 		this.firstName = firstName;
 		LastName = lastName;
@@ -133,9 +123,6 @@ public class Annonceur {
 		this.city = city;
 		this.address = address;
 		this.typeAnnonceur = typeAnnonceur;
-		this.annonceImmobilier = annonceImmobilier;
-		this.annonceVoiture = annonceVoiture;
-		this.commentaire = commentaire;
 	}
 	
 	public Annonceur() {
