@@ -11,9 +11,10 @@ import com.project.bean.Commentaire;
 
 @Repository
 public interface CommentaireDao extends JpaRepository<Commentaire, Long> {
-	
+
 	public List<Commentaire> findByAnnonceVoitureReferance(String referance);
 	public List<Commentaire> findByAnnonceImmobilierReferance(String referance);
+	public Commentaire deleteBytitre(String titre);
 
 	
 }
