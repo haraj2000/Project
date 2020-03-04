@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,12 +21,12 @@ public class CommentaireRest {
 	@Autowired
 	private CommentaireService commentaireService;
 
-	@GetMapping("/AnnonceVoiture/reference/{reference}")
+	@GetMapping("/AnnonceVoiture/referance/{referance}")
 	public List<Commentaire> findByAnnonceVoitureReferance(@PathVariable String referance) {
 		return commentaireService.findByAnnonceVoitureReferance(referance);
 	}
 
-	@GetMapping("/AnnonceImmobilier/reference/{reference}")
+	@GetMapping("/AnnonceImmobilier/referance/{referance}")
 	public List<Commentaire> findByAnnonceImmobilierReferance(@PathVariable String referance) {
 		return commentaireService.findByAnnonceImmobilierReferance(referance);
 	}
@@ -35,7 +36,7 @@ public class CommentaireRest {
 	}
  
 	@PostMapping("/")
-	public void save(Commentaire commentaire) {
+	public void save(@RequestBody Commentaire commentaire) {
 		commentaireService.save(commentaire);
 	}
 

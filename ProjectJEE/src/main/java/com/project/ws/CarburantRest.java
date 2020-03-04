@@ -29,7 +29,7 @@ public class CarburantRest {
 	public Carburant findByLibelle(@PathVariable String libelle) {
 		return carburantService.findByLibelle(libelle);
 	}
-    @GetMapping("/AnnonceVoiture/reference/{reference}")
+    @GetMapping("/AnnonceVoiture/referance/{referance}")
 	public List<Carburant> findByAnnonceVoitureReferance(@PathVariable String referance) {
 		return carburantService.findByAnnonceVoitureReferance(referance);
 	}
@@ -39,7 +39,7 @@ public class CarburantRest {
 		return carburantService.deleteByLibelle(libelle);
 	}
 
-	@GetMapping("/AnnonceVoiture/reference/{reference}/libelle/{libelle}")
+	@GetMapping("/AnnonceVoiture/referance/{referance}/libelle/{libelle}")
 	public List<Carburant> findByAnnonceVoitureReferanceAndLibelle(@PathVariable String referance,@PathVariable String libelle) {
 		return carburantService.findByAnnonceVoitureReferanceAndLibelle(referance, libelle);
 	}
