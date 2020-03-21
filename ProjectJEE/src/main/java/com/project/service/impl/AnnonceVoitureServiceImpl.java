@@ -17,8 +17,8 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 	private AnnonceVoitureDao annonceVoitureDao;
 
 	@Override
-	public AnnonceVoiture findByReferance(String referance) {
-		return annonceVoitureDao.findByReferance(referance);
+	public AnnonceVoiture findByReference(String reference) {
+		return annonceVoitureDao.findByReference(reference);
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 
 	@Override
 	public int save(AnnonceVoiture annonceVoiture) {
-		AnnonceVoiture foundedAnnonceVoiture = findByReferance(annonceVoiture.getReferance());
+		AnnonceVoiture foundedAnnonceVoiture = findByReference(annonceVoiture.getReference());
 
 		if (foundedAnnonceVoiture != null) {
 			return -1;
@@ -59,8 +59,8 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 	}
 
 	@Override
-	public int restituer(String referance, BigDecimal prix) {
-		AnnonceVoiture foundedAnnonceVoiture = findByReferance(referance);
+	public int restituer(String reference, BigDecimal prix) {
+		AnnonceVoiture foundedAnnonceVoiture = findByReference(reference);
 		if (foundedAnnonceVoiture == null)
 			return -1;
 		else if (foundedAnnonceVoiture.getPrix() != null)

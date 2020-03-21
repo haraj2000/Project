@@ -13,5 +13,5 @@ public interface TypeReviewDao extends JpaRepository<TypeReview, Long> {
 	
 	public TypeReview findByReference(String reference);
 	public List<TypeReview> findByNbrStars (int nbrstars);
-
+	public int deleteByReference(String reference);
 }

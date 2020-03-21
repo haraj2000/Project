@@ -39,4 +39,9 @@ public class TypeAnnonceurImpl implements TypeAnnonceurService {
 		return typeAnnonceurDao.findByLibelle(libelle);
 	}
 
+	@Override
+	public int deleteByLibelle(String libelle) {
+		return typeAnnonceurDao.deleteByLibelle(libelle);
+	}
+
 }

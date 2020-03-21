@@ -10,5 +10,5 @@ import com.project.bean.TypeAnnonceur;
 public interface TypeAnnonceurDao extends JpaRepository<TypeAnnonceur, Long> {
 	
 	public TypeAnnonceur findByLibelle(String libelle);
-
+	public int deleteByLibelle(String libelle);
 }

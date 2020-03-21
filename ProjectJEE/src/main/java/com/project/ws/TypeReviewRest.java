@@ -38,5 +38,10 @@ public class TypeReviewRest {
 	public List<TypeReview> fidnByNbrStars(@PathVariable int nbrstars) {
 		return typeReviewService.fidnByNbrStars(nbrstars);
 	}
+	@GetMapping("/delete/Reference/{refrence}")
+	public int deleteByReference(String reference) {
+		return typeReviewService.deleteByReference(reference);
+	}
+	
 	
 }

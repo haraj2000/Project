@@ -8,7 +8,7 @@ import com.project.bean.AnnonceVoiture;
 
 public interface AnnonceVoitureService {
 	
-	public AnnonceVoiture findByReferance(String referance);
+	public AnnonceVoiture findByReference(String reference);
 
 	public List<AnnonceVoiture> findByMarqueNom(String nom);
 	

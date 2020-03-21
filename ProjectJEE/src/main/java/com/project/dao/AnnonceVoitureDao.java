@@ -12,7 +12,7 @@ import com.project.bean.AnnonceVoiture;
 public interface AnnonceVoitureDao extends JpaRepository<AnnonceVoiture, Long> {
 	
 	
-	public AnnonceVoiture findByReferance(String referance);
+	public AnnonceVoiture findByReference(String reference);
 
 	public List<AnnonceVoiture> findByMarqueNom(String nom);
 	

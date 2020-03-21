@@ -11,5 +11,5 @@ public interface TypeReviewService {
 	public List<TypeReview> findAll();
 	public TypeReview findByReference(String reference);
 	public List<TypeReview> fidnByNbrStars (int nbrstars);
-	
+	public int deleteByReference(String reference);
 }

@@ -24,13 +24,13 @@ public class CarburantServiceImpl implements CarburantService {
 	}
 
 	@Override
-	public List<Carburant> findByAnnonceVoitureReferance(String referance) {
-		 return carburantDao.findByAnnonceVoitureReferance(referance);
+	public List<Carburant> findByAnnonceVoitureReference(String reference) {
+		 return carburantDao.findByAnnonceVoitureReference(reference);
 	}
 
 	@Override
-	public List<Carburant> findByAnnonceVoitureReferanceAndLibelle(String referance, String libelle) {
-		return carburantDao.findByAnnonceVoitureReferanceAndLibelle(referance,libelle);
+	public List<Carburant> findByAnnonceVoitureReferenceAndLibelle(String reference, String libelle) {
+		return carburantDao.findByAnnonceVoitureReferenceAndLibelle(reference,libelle);
 	}
 
 	@Override

@@ -21,9 +21,9 @@ public class AnnonceVoitureRest {
 	@Autowired
 	private AnnonceVoitureService annonceVoitureService;
 
-	@GetMapping("/referance/{referance}")
-	public AnnonceVoiture findByReferance(@PathVariable String referance) {
-		return annonceVoitureService.findByReferance(referance);
+	@GetMapping("/referance/{reference}")
+	public AnnonceVoiture findByReferance(@PathVariable String reference) {
+		return annonceVoitureService.findByReference(reference);
 	}
 
 	@GetMapping("/Marque/nom/{nom}")

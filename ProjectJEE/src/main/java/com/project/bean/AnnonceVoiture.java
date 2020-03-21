@@ -16,7 +16,7 @@ public class AnnonceVoiture {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String referance ;
+	private String reference ;
 	private Date date;
 	private String descrp;
 	private BigDecimal prix;
@@ -42,11 +42,11 @@ public class AnnonceVoiture {
 		this.id = id;
 	}
 	
-	public String getReferance() {
-		return referance;
+	public String getReference() {
+		return reference;
 	}
-	public void setReferance(String referance) {
-		this.referance = referance;
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 	public Date getDate() {
 		return date;
@@ -113,7 +113,7 @@ public class AnnonceVoiture {
 
 	@Override
 	public String toString() {
-		return "AnnonceVoiture [id=" + id + ", referance=" + referance + ", date=" + date + ", descrp=" + descrp
+		return "AnnonceVoiture [id=" + id + ", referance=" + reference + ", date=" + date + ", descrp=" + descrp
 				+ ", prix=" + prix + ", kilometrage=" + kilometrage + ", couleur=" + couleur + ", carburant="
 				+ carburant + ", marque=" + marque + ", transmission=" + transmission + ", annonceur=" + annonceur
 				+ ", commentaires=" + commentaires + "]";
@@ -123,12 +123,12 @@ public class AnnonceVoiture {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnnonceVoiture(Long id, String referance, Date date, String descrp, BigDecimal prix, long kilometrage,
+	public AnnonceVoiture(Long id, String reference, Date date, String descrp, BigDecimal prix, long kilometrage,
 			String couleur, Carburant carburant, Marque marque, Transmission transmission, Annonceur annonceur,
 			List<Commentaire> commentaires) {
 		super();
 		this.id = id;
-		this.referance = referance;
+		this.reference = reference;
 		this.date = date;
 		this.descrp = descrp;
 		this.prix = prix;

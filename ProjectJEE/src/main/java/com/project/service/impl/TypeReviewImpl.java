@@ -47,4 +47,9 @@ public class TypeReviewImpl implements TypeReviewService {
 		return typeReviewDao.findByReference(reference);
 	}
 
+	@Override
+	public int deleteByReference(String reference) {
+		return typeReviewDao.deleteByReference(reference);
+	}
+
 }
