@@ -83,5 +83,10 @@ public class Review {
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "Review [reference=" + reference + ", typeReview=" + typeReview + ", dateReview=" + dateReview
+				+ ", annonceur=" + annonceur + "]";
+	}
 	
 }

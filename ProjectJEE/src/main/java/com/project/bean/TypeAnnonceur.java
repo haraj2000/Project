@@ -19,6 +19,12 @@ public class TypeAnnonceur {
 	@OneToMany(mappedBy = "typeAnnonceur")
 	private List<Annonceur> annonceurs;
 	
+	public List<Annonceur> getAnnonceurs() {
+		return annonceurs;
+	}
+	public void setAnnonceurs(List<Annonceur> annonceurs) {
+		this.annonceurs = annonceurs;
+	}
 	public String getLibelle() {
 		return libelle;
 	}
@@ -59,6 +65,10 @@ public class TypeAnnonceur {
 		if (id != other.id)
 			return false;
 		return true;
+	}
+	@Override
+	public String toString() {
+		return "TypeAnnonceur [libelle=" + libelle + "]";
 	}
 	
 }

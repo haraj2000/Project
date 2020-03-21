@@ -30,6 +30,8 @@ public class Annonceur {
 	private List<AnnonceVoiture> annonceVoiture;
 	@OneToMany(mappedBy = "annonceur")
 	private List<Commentaire> commentaire;
+	@OneToMany(mappedBy = "annonceur")
+	private List<Review> reviews;
 	
 	public long getId() {
 		return id;
@@ -109,22 +111,28 @@ public class Annonceur {
 	public void setCommentaire(List<Commentaire> commentaire) {
 		this.commentaire = commentaire;
 	}
+	public List<Review> getReviews() {
+		return reviews;
+	}
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
+	}
 	
-	public Annonceur(Long id, String login, String password, String firstName, String lastName, String mail,
-			int phoneNumber, String country, String city, String address, TypeAnnonceur typeAnnonceur) {
+	
+	public Annonceur(Long id, String mail, String password, String firstName, String lastName, int phoneNumber,
+			String country, String city, String address, TypeAnnonceur typeAnnonceur) {
 		super();
 		this.id = id;
+		this.mail = mail;
 		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.mail = mail;
 		this.phoneNumber = phoneNumber;
 		this.country = country;
 		this.city = city;
 		this.address = address;
 		this.typeAnnonceur = typeAnnonceur;
 	}
-	
 	public Annonceur() {
 		super();
 	}
@@ -148,5 +156,12 @@ public class Annonceur {
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "Annonceur [mail=" + mail + ", password=" + password + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", phoneNumber=" + phoneNumber + ", country=" + country + ", city=" + city + ", address="
+				+ address + ", typeAnnonceur=" + typeAnnonceur + "]";
+	}
+	
 	
 }

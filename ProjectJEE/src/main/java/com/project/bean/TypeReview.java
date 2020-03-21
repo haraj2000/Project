@@ -73,5 +73,9 @@ public class TypeReview {
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "TypeReview [reference=" + reference + ", nbrStars=" + nbrStars + "]";
+	}
 	
 }
