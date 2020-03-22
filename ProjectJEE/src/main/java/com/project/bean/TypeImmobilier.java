@@ -55,5 +55,10 @@ public class TypeImmobilier {
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "TypeImmobilier [libelle=" + libelle + "]";
+	}
+	
 	
 }

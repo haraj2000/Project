@@ -27,9 +27,6 @@ public class AnnonceImmobilier {
 	@ManyToOne
 	private TypeImmobilier typeImmobilier;
 	
-	@OneToMany(mappedBy = "annonceImmobilier")
-	private List<Commentaire> commentaires;
-	
 	public TypeImmobilier getTypeImmobilier() {
 		return typeImmobilier;
 	}
@@ -89,24 +86,15 @@ public class AnnonceImmobilier {
 	public void setAnnonceur(Annonceur annonceur) {
 		this.annonceur = annonceur;
 	}
-	public List<Commentaire> getCommantaires() {
-		return commentaires;
-	}
-	public void setCommantaires(List<Commentaire> commantaires) {
-		this.commentaires = commantaires;
-	}
+
+	
 	public void setId(long id) {
 		this.id = id;
 	}
-	public List<Commentaire> getCommentaires() {
-		return commentaires;
-	}
-	public void setCommentaires(List<Commentaire> commentaires) {
-		this.commentaires = commentaires;
-	}
+	
+	
 	public AnnonceImmobilier(long id, String reference, float prix, float surface, String titreAnnonce,
-			Date dateAnnonce, String adresseImm, String villeImm, Annonceur annonceur, TypeImmobilier typeImmobilier,
-			List<Commentaire> commentaires) {
+			Date dateAnnonce, String adresseImm, String villeImm, Annonceur annonceur, TypeImmobilier typeImmobilie) {
 		super();
 		this.id = id;
 		this.reference = reference;
@@ -118,7 +106,13 @@ public class AnnonceImmobilier {
 		this.villeImm = villeImm;
 		this.annonceur = annonceur;
 		this.typeImmobilier = typeImmobilier;
-		this.commentaires = commentaires;
+		
+	}
+	@Override
+	public String toString() {
+		return "AnnonceImmobilier [reference=" + reference + ", prix=" + prix + ", surface=" + surface
+				+ ", titreAnnonce=" + titreAnnonce + ", dateAnnonce=" + dateAnnonce + ", adresseImm=" + adresseImm
+				+ ", villeImm=" + villeImm + ", annonceur=" + annonceur + ", typeImmobilier=" + typeImmobilier + "]";
 	}
 	public AnnonceImmobilier() {
 		super();

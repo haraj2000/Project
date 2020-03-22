@@ -11,6 +11,20 @@ public class TypeAnnonce {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String libelle;
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getLibelle() {
+		return libelle;
+	}
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -37,6 +51,21 @@ public class TypeAnnonce {
 			return false;
 		return true;
 	}
+	
+	public TypeAnnonce(long id, String libelle) {
+		super();
+		this.id = id;
+		this.libelle = libelle;
+	}
+	public TypeAnnonce() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "TypeAnnonce [libelle=" + libelle + "]";
+	}
+	
 	
 	
 }
