@@ -9,5 +9,6 @@ public interface TypeAnnonceurService {
 	public int save(TypeAnnonceur typeAnnonceur);
 	public List<TypeAnnonceur> findAll();
 	public TypeAnnonceur findByLibelle(String libelle);
-	public int deleteByLibelle(String libelle);
+	public TypeAnnonceur findByReference(String reference);
+	public int deleteByReference(String reference);
 }

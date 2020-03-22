@@ -13,6 +13,7 @@ public class TypeAnnonceur {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private String reference;
 	private String libelle;
 
 	public String getLibelle() {
@@ -28,9 +29,17 @@ public class TypeAnnonceur {
 		this.id = id;
 	}
 	
-	public TypeAnnonceur(long id, String libelle) {
+	public String getReference() {
+		return reference;
+	}
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
+	
+	public TypeAnnonceur(Long id, String reference, String libelle) {
 		super();
 		this.id = id;
+		this.reference = reference;
 		this.libelle = libelle;
 	}
 	public TypeAnnonceur() {

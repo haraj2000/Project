@@ -34,9 +34,14 @@ public class TypeAnnonceurRest {
 	public TypeAnnonceur findByLibelle(@PathVariable String libelle) {
 		return typeAnnonceurService.findByLibelle(libelle);
 	}
-	@DeleteMapping("/Libelle/{libelle}")
-	public int deleteByLibelle(String libelle) {
-		return typeAnnonceurService.deleteByLibelle(libelle);
+	@GetMapping("Reference/{reference}")
+	public TypeAnnonceur findByReference(String reference) {
+		return typeAnnonceurService.findByReference(reference);
 	}
+	@DeleteMapping("/Libelle/{libelle}")
+	public int deleteByReference(String reference) {
+		return typeAnnonceurService.deleteByReference(reference);
+	}
+	
 	
 }

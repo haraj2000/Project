@@ -17,7 +17,7 @@ public class TypeAnnonceurImpl implements TypeAnnonceurService {
 
 	@Override
 	public int save(TypeAnnonceur typeAnnonceur) {
-		TypeAnnonceur typeAnnonceurFounded = findByLibelle(typeAnnonceur.getLibelle());
+		TypeAnnonceur typeAnnonceurFounded = findByReference(typeAnnonceur.getReference());
 		if (typeAnnonceurFounded != null)
 			return -1;
 		else {
@@ -37,8 +37,13 @@ public class TypeAnnonceurImpl implements TypeAnnonceurService {
 	}
 
 	@Override
-	public int deleteByLibelle(String libelle) {
-		return typeAnnonceurDao.deleteByLibelle(libelle);
+	public TypeAnnonceur findByReference(String reference) {
+		return typeAnnonceurDao.findByReference(reference);
+	}
+
+	@Override
+	public int deleteByReference(String reference) {
+		return typeAnnonceurDao.deleteByReference(reference);
 	}
 
 }
