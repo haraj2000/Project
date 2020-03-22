@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.bean.Annonceur;
 import com.project.bean.TypeAnnonceur;
 import com.project.dao.TypeAnnonceurDao;
 import com.project.service.facade.TypeAnnonceurService;
@@ -31,8 +30,6 @@ public class TypeAnnonceurImpl implements TypeAnnonceurService {
 	public List<TypeAnnonceur> findAll() {
 		return typeAnnonceurDao.findAll();
 	}
-
-	
 
 	@Override
 	public TypeAnnonceur findByLibelle(String libelle) {

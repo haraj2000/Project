@@ -113,7 +113,7 @@ public class AnnonceVoiture {
 
 	@Override
 	public String toString() {
-		return "AnnonceVoiture [id=" + id + ", referance=" + reference + ", date=" + date + ", descrp=" + descrp
+		return "AnnonceVoiture [id=" + id + ", reference=" + reference + ", date=" + date + ", descrp=" + descrp
 				+ ", prix=" + prix + ", kilometrage=" + kilometrage + ", couleur=" + couleur + ", carburant="
 				+ carburant + ", marque=" + marque + ", transmission=" + transmission + ", annonceur=" + annonceur
 				+ ", commentaires=" + commentaires + "]";

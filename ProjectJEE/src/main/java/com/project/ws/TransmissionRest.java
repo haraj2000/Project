@@ -26,13 +26,13 @@ public class TransmissionRest {
 	}
 
 	@GetMapping("/Annoncevoiture/libelle/{libelle}")
-	public List<Transmission> findByAnnonceVoitureReferance(@PathVariable String referance) {
-		return transmissionService.findByAnnonceVoitureReferance(referance);
+	public List<Transmission> findByAnnonceVoitureReference(@PathVariable String reference) {
+		return transmissionService.findByAnnonceVoitureReference(reference);
 	}
 
 	@GetMapping("/AnnonceVoiture/referance/{referance}/libelle/{libelle}")
-	public List<Transmission> findByAnnonceVoitureReferanceAndLibelle(@PathVariable String referance,@PathVariable String libelle) {
-		return transmissionService.findByAnnonceVoitureReferanceAndLibelle(referance, libelle);
+	public List<Transmission> findByAnnonceVoitureReferanceAndLibelle(@PathVariable String reference,@PathVariable String libelle) {
+		return transmissionService.findByAnnonceVoitureReferenceAndLibelle(reference, libelle);
 	}
 
 	@PostMapping("/")

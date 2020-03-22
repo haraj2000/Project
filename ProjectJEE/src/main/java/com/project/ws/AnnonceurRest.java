@@ -64,9 +64,5 @@ public class AnnonceurRest {
 	public List<Annonceur> findByTypeAnnonceur(@RequestBody TypeAnnonceur typeAnnonceur) {
 		return annonceurService.findByTypeAnnonceur(typeAnnonceur);
 	}
-
-	public List<Annonceur> findByFirstName(String firstName) {
-		return annonceurService.findByFirstName(firstName);
-	}
 	
 }

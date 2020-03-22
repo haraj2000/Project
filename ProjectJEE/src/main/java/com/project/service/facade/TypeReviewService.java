@@ -2,7 +2,6 @@ package com.project.service.facade;
 
 import java.util.List;
 
-import com.project.bean.Review;
 import com.project.bean.TypeReview;
 
 public interface TypeReviewService {

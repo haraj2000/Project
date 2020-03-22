@@ -1,12 +1,10 @@
 package com.project.bean;
 
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 public class TypeReview {
@@ -16,8 +14,7 @@ public class TypeReview {
 	private Long id;
 	private String reference;
 	private int nbrStars;
-	@OneToMany(mappedBy = "typeReview")
-	private List<Review> reviews;
+
 	
 	public Long getId() {
 		return id;
@@ -38,12 +35,7 @@ public class TypeReview {
 		this.nbrStars = nbrStars;
 	}
 
-	public List<Review> getReviews() {
-		return reviews;
-	}
-	public void setReviews(List<Review> reviews) {
-		this.reviews = reviews;
-	}
+
 	public TypeReview(Long id, String reference, int nbrStars) {
 		super();
 		this.id = id;

@@ -20,14 +20,14 @@ public class TransmissionServiceImpl implements TransmissionService{
 		}
 
 	@Override
-	public List<Transmission> findByAnnonceVoitureReferance(String referance) {
-		return transmissionDao.findByAnnonceVoitureReferance(referance);
+	public List<Transmission> findByAnnonceVoitureReference(String reference) {
+		return transmissionDao.findByAnnonceVoitureReference(reference);
 	}
 
 
 	@Override
-	public List<Transmission> findByAnnonceVoitureReferanceAndLibelle(String referance, String libelle) {
-		return transmissionDao.findByAnnonceVoitureReferanceAndLibelle(referance,libelle);
+	public List<Transmission> findByAnnonceVoitureReferenceAndLibelle(String reference, String libelle) {
+		return transmissionDao.findByAnnonceVoitureReferenceAndLibelle(reference,libelle);
 	}
 	
 	@Override

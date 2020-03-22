@@ -18,14 +18,19 @@ public class AnnonceurImpl implements AnnonceurService {
 	
 	@Override
 	public int save(Annonceur annonceur) {
-		Annonceur annonceurFounded = findByMail(annonceur.getMail());
-		if( annonceurFounded != null)
+		String mailFounded = annonceur.getMail();
+		if (mailFounded == null)
 			return -1;
-		else if (annonceur.getPassword()==null)
+		else {
+		Annonceur annonceurFounded = findByMail(mailFounded);
+		if( annonceurFounded != null)
 			return -2;
+		else if (annonceur.getPassword()==null)
+			return -3;
 		else {
 			annonceurDao.save(annonceur);
 		return 1;
+		}
 		}
 	}
 
@@ -52,7 +57,7 @@ public class AnnonceurImpl implements AnnonceurService {
 	@Override
 	public int update(Annonceur annonceur) {
 		Annonceur annonceurFounded = findByMail(annonceur.getMail());
-		if( annonceurFounded != null)
+		if( annonceurFounded == null)
 			return -1;
 		else {
 			annonceurFounded.setFirstName(annonceur.getFirstName());
@@ -61,6 +66,7 @@ public class AnnonceurImpl implements AnnonceurService {
 			annonceurFounded.setCountry(annonceur.getCountry());
 			annonceurFounded.setCity(annonceur.getCity());
 			annonceurFounded.setAddress(annonceur.getAddress());
+			annonceurFounded.setTypeAnnonceur(annonceur.getTypeAnnonceur());
 			annonceurDao.save(annonceurFounded);
 			return 1;
 		}

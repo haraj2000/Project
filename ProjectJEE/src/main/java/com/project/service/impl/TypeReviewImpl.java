@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.bean.Review;
 import com.project.bean.TypeReview;
 import com.project.dao.TypeReviewDao;
 import com.project.service.facade.TypeReviewService;

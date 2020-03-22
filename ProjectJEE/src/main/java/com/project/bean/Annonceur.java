@@ -1,13 +1,11 @@
 package com.project.bean;
 
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Annonceur {
@@ -24,14 +22,7 @@ public class Annonceur {
 	private String address;
 	@ManyToOne
 	private TypeAnnonceur typeAnnonceur;
-	@OneToMany(mappedBy = "annonceur")
-	private List<AnnonceImmobilier> annonceImmobilier;
-	@OneToMany(mappedBy = "annonceur")
-	private List<AnnonceVoiture> annonceVoiture;
-	@OneToMany(mappedBy = "annonceur")
-	private List<Commentaire> commentaire;
-	@OneToMany(mappedBy = "annonceur")
-	private List<Review> reviews;
+
 	
 	public long getId() {
 		return id;
@@ -93,31 +84,6 @@ public class Annonceur {
 	public void setTypeAnnonceur(TypeAnnonceur typeAnnonceur) {
 		this.typeAnnonceur = typeAnnonceur;
 	}
-	public List<AnnonceImmobilier> getAnnonceImmobilier() {
-		return annonceImmobilier;
-	}
-	public void setAnnonceImmobilier(List<AnnonceImmobilier> annonceImmobilier) {
-		this.annonceImmobilier = annonceImmobilier;
-	}
-	public List<AnnonceVoiture> getAnnonceVoiture() {
-		return annonceVoiture;
-	}
-	public void setAnnonceVoiture(List<AnnonceVoiture> annonceVoiture) {
-		this.annonceVoiture = annonceVoiture;
-	}
-	public List<Commentaire> getCommentaire() {
-		return commentaire;
-	}
-	public void setCommentaire(List<Commentaire> commentaire) {
-		this.commentaire = commentaire;
-	}
-	public List<Review> getReviews() {
-		return reviews;
-	}
-	public void setReviews(List<Review> reviews) {
-		this.reviews = reviews;
-	}
-	
 	
 	public Annonceur(Long id, String mail, String password, String firstName, String lastName, int phoneNumber,
 			String country, String city, String address, TypeAnnonceur typeAnnonceur) {

@@ -33,7 +33,7 @@ public class ReviewRest {
 	public List<Review> findAll() {
 		return reviewService.findAll();
 	}
-	@PutMapping("/review/{review}")
+	@PutMapping("/")
 	public int update(@RequestBody Review review) {
 		return reviewService.update(review);
 	}
@@ -41,11 +41,11 @@ public class ReviewRest {
 	public Review findByReference(@PathVariable String reference) {
 		return reviewService.findByReference(reference);
 	}
-	@GetMapping("/")
+	@GetMapping("/findByAnnonceur")
 	public List<Review> findByAnnonceur(@RequestBody Annonceur annonceur) {
 		return reviewService.findByAnnonceur(annonceur);
 	}
-	@GetMapping("typeReview/{typeReview}")
+	@GetMapping("/findByTypeReview")
 	public List<Review> findByTypeReview(@RequestBody TypeReview typeReview) {
 		return reviewService.findByTypeReview(typeReview);
 	}
