@@ -13,7 +13,7 @@ import com.project.bean.TypeImmobilier;
 import com.project.service.facade.TypeImmobilierService;
 
 @RestController
-@RequestMapping("/projet/TypeImmobilier")
+@RequestMapping("project/TypeImmobilier")
 public class TypeImmobilierRest {
 	
 	private TypeImmobilierService typeImmobilierService;

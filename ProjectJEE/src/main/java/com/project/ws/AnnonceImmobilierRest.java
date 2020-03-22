@@ -16,7 +16,7 @@ import com.project.bean.AnnonceImmobilier;
 import com.project.service.facade.AnnonceImmobilierService;
 
 @RestController
-@RequestMapping("/projet/AnnonceImmobilier")
+@RequestMapping("project/AnnonceImmobilier")
 public class AnnonceImmobilierRest {
 	
 	@Autowired

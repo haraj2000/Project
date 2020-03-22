@@ -13,7 +13,7 @@ import com.project.bean.TypeAnnonce;
 import com.project.service.facade.TypeAnnonceService;
 
 @RestController
-@RequestMapping("/projet/TypeAnnonce")
+@RequestMapping("project/TypeAnnonce")
 public class TypeAnnonceRest {
 	
 	private TypeAnnonceService typeAnnonceService;
