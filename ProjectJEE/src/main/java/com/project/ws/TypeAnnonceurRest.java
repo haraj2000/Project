@@ -38,7 +38,7 @@ public class TypeAnnonceurRest {
 	public TypeAnnonceur findByReference(String reference) {
 		return typeAnnonceurService.findByReference(reference);
 	}
-	@DeleteMapping("/Libelle/{libelle}")
+	@DeleteMapping("/Reference/{reference}")
 	public int deleteByReference(String reference) {
 		return typeAnnonceurService.deleteByReference(reference);
 	}
