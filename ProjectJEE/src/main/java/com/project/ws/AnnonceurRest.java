@@ -52,10 +52,6 @@ public class AnnonceurRest {
 	public Annonceur findByMail(@PathVariable String mail) {
 		return annonceurService.findByMail(mail);
 	}
-	@GetMapping("/country/{country}")
-	public List<Annonceur> findByCountry(@PathVariable String country) {
-		return annonceurService.findByCountry(country);
-	}
 	@GetMapping("/city/{city}")
 	public List<Annonceur> findByCity(@PathVariable String city) {
 		return annonceurService.findByCity(city);

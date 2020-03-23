@@ -17,7 +17,6 @@ public class Annonceur {
 	private String firstName; // la ilaha ila lah 
 	private String lastName;
 	private int phoneNumber;
-	private String country;
 	private String city;
 	private String address;
 	@ManyToOne
@@ -60,12 +59,6 @@ public class Annonceur {
 	public void setPhoneNumber(int phone_number) {
 		this.phoneNumber = phone_number;
 	}
-	public String getCountry() {
-		return country;
-	}
-	public void setCountry(String country) {
-		this.country = country;
-	}
 	public String getCity() {
 		return city;
 	}
@@ -85,8 +78,7 @@ public class Annonceur {
 		this.typeAnnonceur = typeAnnonceur;
 	}
 	
-	public Annonceur(Long id, String mail, String password, String firstName, String lastName, int phoneNumber,
-			String country, String city, String address, TypeAnnonceur typeAnnonceur) {
+	public Annonceur(Long id, String mail, String password, String firstName, String lastName, int phoneNumber, String city, String address, TypeAnnonceur typeAnnonceur) {
 		super();
 		this.id = id;
 		this.mail = mail;
@@ -94,7 +86,6 @@ public class Annonceur {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phoneNumber = phoneNumber;
-		this.country = country;
 		this.city = city;
 		this.address = address;
 		this.typeAnnonceur = typeAnnonceur;
@@ -125,7 +116,7 @@ public class Annonceur {
 	@Override
 	public String toString() {
 		return "Annonceur [mail=" + mail + ", password=" + password + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", phoneNumber=" + phoneNumber + ", country=" + country + ", city=" + city + ", address="
+				+ lastName + ", phoneNumber=" + phoneNumber + ", city=" + city + ", address="
 				+ address + ", typeAnnonceur=" + typeAnnonceur + "]";
 	}
 	

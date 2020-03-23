@@ -63,7 +63,6 @@ public class AnnonceurImpl implements AnnonceurService {
 			annonceurFounded.setFirstName(annonceur.getFirstName());
 			annonceurFounded.setLastName(annonceur.getLastName());
 			annonceurFounded.setPhoneNumber(annonceur.getPhoneNumber());
-			annonceurFounded.setCountry(annonceur.getCountry());
 			annonceurFounded.setCity(annonceur.getCity());
 			annonceurFounded.setAddress(annonceur.getAddress());
 			annonceurFounded.setTypeAnnonceur(annonceur.getTypeAnnonceur());
@@ -77,10 +76,6 @@ public class AnnonceurImpl implements AnnonceurService {
 		return annonceurDao.findByFirstName(firstName);
 	}
 
-	@Override
-	public List<Annonceur> findByCountry(String country) {
-		return annonceurDao.findByCountry(country);
-	}
 
 	@Override
 	public List<Annonceur> findByCity(String city) {
