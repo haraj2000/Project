@@ -16,7 +16,7 @@ import com.project.bean.TypeReview;
 import com.project.service.facade.TypeReviewService;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8090"})
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RequestMapping("project/TypeReview")
 public class TypeReviewRest {
 

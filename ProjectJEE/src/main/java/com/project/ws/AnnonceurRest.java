@@ -18,7 +18,7 @@ import com.project.bean.TypeAnnonceur;
 import com.project.service.facade.AnnonceurService;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8090"})
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RequestMapping("project/Annonceur")
 public class AnnonceurRest {
 

@@ -20,7 +20,7 @@ import com.project.bean.TypeReview;
 import com.project.service.facade.ReviewService;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8090"})
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RequestMapping("project/Review")
 public class ReviewRest {
 
