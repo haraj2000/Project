@@ -32,16 +32,16 @@ public class TypeAnnonceurRest {
 		return typeAnnonceurService.findAll();
 	}
 	
-	@GetMapping("Libelle/{libelle}")
+	@GetMapping("libelle/{libelle}")
 	public TypeAnnonceur findByLibelle(@PathVariable String libelle) {
 		return typeAnnonceurService.findByLibelle(libelle);
 	}
-	@GetMapping("Reference/{reference}")
-	public TypeAnnonceur findByReference(String reference) {
+	@GetMapping("reference/{reference}")
+	public TypeAnnonceur findByReference(@PathVariable String reference) {
 		return typeAnnonceurService.findByReference(reference);
 	}
-	@DeleteMapping("/Reference/{reference}")
-	public int deleteByReference(String reference) {
+	@DeleteMapping("/reference/{reference}")
+	public int deleteByReference(@PathVariable String reference) {
 		return typeAnnonceurService.deleteByReference(reference);
 	}
 	

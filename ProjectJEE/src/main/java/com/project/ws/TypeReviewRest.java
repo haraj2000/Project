@@ -31,17 +31,17 @@ public class TypeReviewRest {
 	public List<TypeReview> findAll() {
 		return typeReviewService.findAll();
 	}
-	@GetMapping("/Reference/{reference}")
+	@GetMapping("/reference/{reference}")
 	public TypeReview findByReference(@PathVariable String reference) {
 		return typeReviewService.findByReference(reference);
 	}
 	
-	@GetMapping("/Nbrstars/{nbrstars}")
+	@GetMapping("/nbrstars/{nbrstars}")
 	public List<TypeReview> fidnByNbrStars(@PathVariable int nbrstars) {
 		return typeReviewService.fidnByNbrStars(nbrstars);
 	}
-	@DeleteMapping("/Reference/{refrence}")
-	public int deleteByReference(String reference) {
+	@DeleteMapping("/reference/{refrence}")
+	public int deleteByReference(@PathVariable String reference) {
 		return typeReviewService.deleteByReference(reference);
 	}
 	
