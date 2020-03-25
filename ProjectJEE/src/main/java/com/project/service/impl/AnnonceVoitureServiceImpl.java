@@ -1,6 +1,7 @@
 package com.project.service.impl;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,7 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 		if (foundedAnnonceVoiture != null) {
 			return -1;
 		} else {
+			annonceVoiture.setDate(new Date());
 			annonceVoitureDao.save(annonceVoiture);
 			return 1;
 		}

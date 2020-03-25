@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class AnnonceImmobilier {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String reference;
 	private float prix;
@@ -26,6 +26,8 @@ public class AnnonceImmobilier {
 	private Annonceur annonceur;
 	@ManyToOne
 	private TypeImmobilier typeImmobilier;
+	@ManyToOne
+	private TypeAnnonce typeAnnonce;
 	
 	public TypeImmobilier getTypeImmobilier() {
 		return typeImmobilier;

@@ -28,7 +28,7 @@ public class AnnonceImmobilierRest {
 	}
 
 	@PostMapping("/")
-	public int save(AnnonceImmobilier annonceImmobilier) {
+	public int save(@RequestBody AnnonceImmobilier annonceImmobilier) {
 		return annonceImmobilierService.save(annonceImmobilier);
 	}
 

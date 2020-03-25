@@ -23,6 +23,7 @@ public class AnnonceImmobilierServiceImpl  implements AnnonceImmobilierService{
 		if(findAnnonceImmobilier!=null) {
 			return -1;
 		}else{
+			annonceImmobilier.setDateAnnonce(new Date());
 			annonceImmobilierDao.save(annonceImmobilier);
 			return 1;
 		}

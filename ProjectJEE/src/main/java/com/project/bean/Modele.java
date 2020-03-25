@@ -13,6 +13,7 @@ import javax.persistence.OneToMany;
 public class Modele {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	private String version;
 	private String nom;
 	private int annee;
@@ -21,6 +22,15 @@ public class Modele {
 	private List<Marque> marques;
 
 	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getNom() {
 		return nom;
 	}
