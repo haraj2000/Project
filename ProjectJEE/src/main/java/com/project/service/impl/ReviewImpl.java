@@ -3,6 +3,8 @@ package com.project.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -71,6 +73,7 @@ public class ReviewImpl implements ReviewService {
 	}
 
 	@Override
+	@Transactional
 	public int deleteByReference(String reference) {
 		return reviewDao.deleteByReference(reference);
 	}

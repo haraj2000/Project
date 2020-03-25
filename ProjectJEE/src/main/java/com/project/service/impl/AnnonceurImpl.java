@@ -2,6 +2,8 @@ package com.project.service.impl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,6 +52,7 @@ public class AnnonceurImpl implements AnnonceurService {
 	}
 
 	@Override
+	@Transactional
 	public int deleteByMail(String mail) {
 		return annonceurDao.deleteByMail(mail);
 	}
