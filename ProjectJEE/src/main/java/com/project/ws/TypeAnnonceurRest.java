@@ -32,11 +32,11 @@ public class TypeAnnonceurRest {
 		return typeAnnonceurService.findAll();
 	}
 	
-	@GetMapping("libelle/{libelle}")
+	@GetMapping("/libelle/{libelle}")
 	public TypeAnnonceur findByLibelle(@PathVariable String libelle) {
 		return typeAnnonceurService.findByLibelle(libelle);
 	}
-	@GetMapping("reference/{reference}")
+	@GetMapping("/reference/{reference}")
 	public TypeAnnonceur findByReference(@PathVariable String reference) {
 		return typeAnnonceurService.findByReference(reference);
 	}
