@@ -48,7 +48,7 @@ public class MarqueServiceImpl implements MarqueService {
 	public List<Marque> findAll() {
 		return marqueDao.findAll();
 	}
-
+    @Override
 	@Transactional
 	public Marque deleteByNom(String nom) {
 		return marqueDao.deleteByNom(nom);
