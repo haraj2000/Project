@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -71,6 +73,12 @@ public class AnnonceVoitureServiceImpl implements AnnonceVoitureService {
 			foundedAnnonceVoiture.setPrix(prix);
 			annonceVoitureDao.save(foundedAnnonceVoiture);
 			return 1;
-		}	}
-}
+		}
+	}
 
+	@Transactional
+	@Override
+	public AnnonceVoiture deleteByReference(String reference) {
+		return annonceVoitureDao.deleteByReference(reference);
+	}
+}
