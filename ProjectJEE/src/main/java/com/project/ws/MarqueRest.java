@@ -17,12 +17,13 @@ import com.project.bean.Marque;
 import com.project.service.facade.MarqueService;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = { "http://localhost:4200" })
 @RequestMapping("project/Marque")
 public class MarqueRest {
 	@Autowired
 	private MarqueService marqueService;
-@DeleteMapping("/nom/{nom}")
+
+	@DeleteMapping("/nom/{nom}")
 	public Marque deleteByNom(@PathVariable String nom) {
 		return marqueService.deleteByNom(nom);
 	}
