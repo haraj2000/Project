@@ -16,6 +16,6 @@ public interface MarqueService {
 
 	public List<Marque> findAll();
 
-	public Marque deleteByNom(String nom);
+	public int deleteByNom(String nom);
 
 }

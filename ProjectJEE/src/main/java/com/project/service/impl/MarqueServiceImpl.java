@@ -50,7 +50,7 @@ public class MarqueServiceImpl implements MarqueService {
 	}
     @Override
 	@Transactional
-	public Marque deleteByNom(String nom) {
+	public int  deleteByNom(String nom) {
 		return marqueDao.deleteByNom(nom);
 	}
 

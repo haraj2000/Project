@@ -24,7 +24,7 @@ public class MarqueRest {
 	private MarqueService marqueService;
 
 	@DeleteMapping("/nom/{nom}")
-	public Marque deleteByNom(@PathVariable String nom) {
+	public int deleteByNom(@PathVariable String nom) {
 		return marqueService.deleteByNom(nom);
 	}
 
