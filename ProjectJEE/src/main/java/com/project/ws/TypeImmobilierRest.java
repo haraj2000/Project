@@ -24,8 +24,9 @@ public class TypeImmobilierRest {
 	}
 
 	@PostMapping("/")
-	public void save(@RequestBody TypeImmobilier typeImmobilier) {
+	public int save(@RequestBody TypeImmobilier typeImmobilier) {
 		typeImmobilierService.save(typeImmobilier);
+		return 1;
 	}
 
 	@GetMapping("/")

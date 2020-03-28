@@ -8,7 +8,7 @@ public interface TypeImmobilierService {
 
 	public TypeImmobilier findByLibelle(String libelle);
 
-	public void save(TypeImmobilier typeImmobilier);
+	public int save(TypeImmobilier typeImmobilier);
 
 	public List<TypeImmobilier> findAll();
 

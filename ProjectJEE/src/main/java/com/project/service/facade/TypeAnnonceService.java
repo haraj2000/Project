@@ -8,7 +8,7 @@ public interface TypeAnnonceService {
 
 	public TypeAnnonce findByLibelle(String libelle);
 
-	public void save(TypeAnnonce typeAnnonce);
+	public int save(TypeAnnonce typeAnnonce);
 
 	public List<TypeAnnonce> findAll();
 

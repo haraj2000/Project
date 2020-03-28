@@ -24,8 +24,8 @@ public class TypeAnnonceRest {
 	}
 
 	@PostMapping("/")
-	public void save(@RequestBody TypeAnnonce typeAnnonce) {
-		typeAnnonceService.save(typeAnnonce);
+	public int save(@RequestBody TypeAnnonce typeAnnonce) {
+		return typeAnnonceService.save(typeAnnonce);
 	}
 
 	@GetMapping("/")
