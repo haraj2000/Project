@@ -14,6 +14,7 @@ public class Marque {
 	private String nom;
 	@ManyToOne
 	private Modele modele;
+	
 	public long getId() {
 		return id;
 	}

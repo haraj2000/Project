@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,11 @@ import com.project.service.facade.AnnonceVoitureService;
 public class AnnonceVoitureRest {
 	@Autowired
 	private AnnonceVoitureService annonceVoitureService;
+
+	@DeleteMapping("/referance/{reference}")
+	public AnnonceVoiture deleteByReference(String reference) {
+		return annonceVoitureService.deleteByReference(reference);
+	}
 
 	@GetMapping("/referance/{reference}")
 	public AnnonceVoiture findByReferance(@PathVariable String reference) {

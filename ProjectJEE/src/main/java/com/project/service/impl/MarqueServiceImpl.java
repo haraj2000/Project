@@ -2,6 +2,8 @@ package com.project.service.impl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,6 +47,11 @@ public class MarqueServiceImpl implements MarqueService {
 	@Override
 	public List<Marque> findAll() {
 		return marqueDao.findAll();
+	}
+    @Override
+	@Transactional
+	public int  deleteByNom(String nom) {
+		return marqueDao.deleteByNom(nom);
 	}
 
 }

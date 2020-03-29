@@ -16,8 +16,9 @@ public class TypeAnnonceServiceImpl implements TypeAnnonceService {
 	}
 
 	@Override
-	public void save(TypeAnnonce typeAnnonce) {
+	public int save(TypeAnnonce typeAnnonce) {
 		typeAnnonceDao.save(typeAnnonce);
+		return 1;
 	}
 
 	@Override
