@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Modele {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String version;
 	private String nom;

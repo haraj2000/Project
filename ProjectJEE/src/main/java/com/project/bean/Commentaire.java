@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Commentaire {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	@ManyToOne
 	private Annonceur annonceur;

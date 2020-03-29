@@ -67,7 +67,7 @@ public class TypeAnnonceur {
 	}
 	@Override
 	public String toString() {
-		return "TypeAnnonceur [libelle=" + libelle + "]";
+		return "TypeAnnonceur [reference=" + reference + ", libelle=" + libelle + "]";
 	}
 	
 }

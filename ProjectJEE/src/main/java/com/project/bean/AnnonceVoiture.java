@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class AnnonceVoiture {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String reference ;
 	private Date date;

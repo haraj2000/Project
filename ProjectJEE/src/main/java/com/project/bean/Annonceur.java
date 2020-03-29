@@ -23,7 +23,8 @@ public class Annonceur {
 	private TypeAnnonceur typeAnnonceur;
 
 	
-	public long getId() {
+	
+	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {

@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 public class Carburant {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 	private String libelle;
 	private String energie;

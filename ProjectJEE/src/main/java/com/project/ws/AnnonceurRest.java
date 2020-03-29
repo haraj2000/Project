@@ -30,7 +30,7 @@ public class AnnonceurRest {
 		return annonceurService.save(annonceur);
 	}
 
-	@GetMapping("/all")
+	@GetMapping("/all/")
 	public List<Annonceur> findAll() {
 		return annonceurService.findAll();
 	}
