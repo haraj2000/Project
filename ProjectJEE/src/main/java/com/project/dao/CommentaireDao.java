@@ -13,7 +13,7 @@ public interface CommentaireDao extends JpaRepository<Commentaire, Long> {
 	public List<Commentaire> findByAnnonceVoitureReference(String reference);
 	public List<Commentaire> findByAnnonceImmobilierReference(String reference);
 	public Commentaire deleteBytitre(String titre);
-
+   
 
 	
 }
