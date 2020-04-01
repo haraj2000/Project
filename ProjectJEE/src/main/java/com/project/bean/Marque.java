@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Marque {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String nom;
 	@ManyToOne
