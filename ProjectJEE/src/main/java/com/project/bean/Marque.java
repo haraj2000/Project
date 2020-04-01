@@ -8,6 +8,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Marque {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
