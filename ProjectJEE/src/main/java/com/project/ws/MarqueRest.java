@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.project.bean.Marque;
 import com.project.service.facade.MarqueService;
 
+
 @RestController
 @CrossOrigin(origins = { "http://localhost:4200" })
 @RequestMapping("project/Marque")

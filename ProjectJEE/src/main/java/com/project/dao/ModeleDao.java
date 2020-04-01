@@ -15,4 +15,6 @@ public interface ModeleDao extends JpaRepository<Modele, String> {
 	public Modele findByNom(String nom);
 
 	public Modele findByAnnee(int annee);
+	
+	public int  deleteByVersion(String version);
 }

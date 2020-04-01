@@ -2,6 +2,8 @@ package com.project.service.impl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,6 +53,11 @@ public class ModeleServiceImpl implements ModeleService {
 	@Override
 	public List<Modele> findAll() {
 		return modeleDao.findAll();
+	}
+@Transactional
+	@Override
+	public int deleteByVersion(String version) {
+		return modeleDao.deleteByVersion(version);
 	}
 
 	

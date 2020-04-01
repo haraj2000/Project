@@ -18,5 +18,6 @@ public Modele findByVersion(String version);
 	public int restituer(String nom);
 
 	public List<Modele> findAll();
+	public int deleteByVersion(String version);
 
 }
