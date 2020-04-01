@@ -18,7 +18,7 @@ public class AnnonceurImpl implements AnnonceurService {
 
 	@Autowired
 	AnnonceurDao annonceurDao;
-	TypeAnnonceurService typeAnnonceurService;
+
 	
 	@Override
 	public int save(Annonceur annonceur) {
