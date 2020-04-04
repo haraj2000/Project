@@ -23,6 +23,7 @@ public class ModeleRest {
 	@Autowired
 	private ModeleService modeleService;
 
+	
 	@DeleteMapping("/version/{version}")
 	public int deleteByVersion(String version) {
 		return modeleService.deleteByVersion(version);
