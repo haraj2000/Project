@@ -11,19 +11,18 @@ import com.project.bean.Annonceur;
 import com.project.bean.TypeAnnonceur;
 import com.project.dao.AnnonceurDao;
 import com.project.service.facade.AnnonceurService;
-import com.project.service.facade.TypeAnnonceurService;
 
 @Service
 public class AnnonceurImpl implements AnnonceurService {
 
 	@Autowired
 	AnnonceurDao annonceurDao;
-	TypeAnnonceurService typeAnnonceurService;
+
 	
 	@Override
 	public int save(Annonceur annonceur) {
 		Annonceur annonceurFounded = findByMail(annonceur.getMail());
-		if( annonceurFounded != null)
+		if( annonceurFounded == null)
 			return -1;
 		else {
 			annonceurDao.save(annonceur);

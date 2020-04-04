@@ -79,7 +79,9 @@ public class Annonceur {
 		this.typeAnnonceur = typeAnnonceur;
 	}
 	
-	public Annonceur(Long id, String mail, String password, String firstName, String lastName, int phoneNumber, String city, String address, TypeAnnonceur typeAnnonceur) {
+	
+	public Annonceur(Long id, String mail, String password, String firstName, String lastName,
+			int phoneNumber, String city, String address, TypeAnnonceur typeAnnonceur) {
 		super();
 		this.id = id;
 		this.mail = mail;
